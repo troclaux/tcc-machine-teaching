@@ -18,10 +18,15 @@ with open('solutions.pkl', 'rb') as f:
         path = os.path.join(path, problem_id)
         path_id = os.path.join(path, solution_id)
         path_txt = os.path.join(path, solution_txt)
+
+        if not os.path.exists(path):
+            os.makedirs(path)
+
+        # with open(path_txt, 'w', encoding="utf-8") as g:
+        #     g.write(enunciado["outcome"])
         with open(path_id, 'w', encoding="utf-8") as g:
             g.write(enunciado["solution"])
-        with open(path_txt, 'w', encoding="utf-8") as g:
-            g.write(enunciado["outcome"])
+
         if enunciado["outcome"] == "F":
             solucoes_reprovadas = solucoes_reprovadas + 1
         if enunciado["outcome"] == "P":
