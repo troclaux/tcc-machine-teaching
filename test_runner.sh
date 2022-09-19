@@ -15,9 +15,9 @@ for file in solution_*.py; do
 	import_file="from ${str} import *"
 	solution_id=${str:9}
 	echo "$import_file"
-	#pytest test_736.py
-	echo "Running test_$problem_id.py"
 	#replace first line of test_$problem_id.py with $import_file
 	sed -i "1s/.*/$import_file/" test_$problem_id.py
+	echo "Running test_$problem_id.py"
+	pytest test_$problem_id.py
 done
 
