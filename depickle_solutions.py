@@ -12,7 +12,7 @@ with open('solutions.pkl', 'rb') as f:
 
     for enunciado in data:
         problem_id = str(enunciado["problem_id"])
-        solution_id = str(i) + ".py"
+        solution_id = "solution_" + str(i) + ".py"
         # solution_txt = str(i) + ".txt"
         path = os.path.join(directory, "problems")
         path = os.path.join(path, problem_id)
