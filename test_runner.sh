@@ -2,7 +2,9 @@
 # chmod +x test_runner.sh
 # ./test_runner.sh
 
-cd problems/736
+problem_id=736
+
+cd problems/$problem_id
 
 # run all files that start with solution_ and end with .py
 for file in solution_*.py; do
@@ -10,9 +12,12 @@ for file in solution_*.py; do
 	# create variable str that saves the name of the file without the extension
 	str=${file%.*}
 	# remove the first 9 characters from the variable str
-	# solution_id=${str:9}
 	import_file="from ${str} import *"
+	solution_id=${str:9}
 	echo "$import_file"
 	#pytest test_736.py
+	echo "Running test_$problem_id.py"
+	#replace first line of test_$problem_id.py with $import_file
+	sed -i "1s/.*/$import_file/" test_$problem_id.py
 done
 
