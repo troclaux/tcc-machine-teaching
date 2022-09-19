@@ -12,6 +12,7 @@ for file in solution_*.py; do
 	# remove the first 9 characters from the variable str
 	# solution_id=${str:9}
 	import_file="from ${str} import *"
+	echo "$import_file"
 	#pytest test_736.py
 done
 
