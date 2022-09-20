@@ -9,6 +9,8 @@ partitions = [element.upper() for element in partitions]
 #combs = [(partition1, partition2) for idx, partition1 in enumerate(partitions) for partition2 in partitions[idx + 1:]]
 #print(combs)
 
+def pretty_print_matrix(matrix):
+  print('\n'.join(['\t'.join([str(cell) for cell in row]) for row in matrix]))
 
 def get_requirements(partition_list):
   combs = list(combinations(partition_list, 2))
