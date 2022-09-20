@@ -1,5 +1,10 @@
 /problems.pkl
 /solutions.pkl
 
-/problems/
+#/problems/
+# ignore everything but files that start with "test_"
+# and end with ".py"
+# and are in the "problems" directory
+/problems/*/*
+!/problems/*/test_*.py
 /solutions/
