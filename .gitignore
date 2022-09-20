@@ -1,0 +1,5 @@
+/problems.pkl
+/solutions.pkl
+
+/problems/*/*
+!/problems/*/test_*.py
