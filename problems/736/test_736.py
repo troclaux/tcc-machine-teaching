@@ -2,7 +2,15 @@ from solution_50914 import *
 
 import pytest
 
-def test_capital_case():
-	assert concatenacao("A", "B") == "ABBA"
+test_cases = [
+	('1','','1'),
+	('','1','1'),
+	('','',''),
+	('x','b','xb'),
+	('1','y','1y')
+]
 
-print(concatenacao("A", "B"))
+@pytest.mark.parametrize("a, b, output", test_cases)
+
+def test_concatenacao(a, b, output):
+	assert concatenacao(a, b) == output
