@@ -1,6 +1,12 @@
-from solution_57681 import *
+from solution_57650 import *
 
 import pytest
 
-def test_substitui(s, x, i):
-	assert test_substitui('hello world', 'i', 1) == "hillo world"
+test_cases = [
+	('hello world', 'i', 0, 'iello world'),
+]
+
+@pytest.mark.parametrize("s, x, i, output", test_cases)
+
+def test_substitui(s, x, i, output):
+	assert substitui(s, x, i) == output
