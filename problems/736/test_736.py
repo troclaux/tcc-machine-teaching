@@ -6,8 +6,8 @@ test_cases = [
 	('1','','1'),
 	('','1','1'),
 	('','',''),
-	('x','b','xb'),
-	('1','y','1y')
+	('x','y','xy'),
+	('1','2','12'),
 ]
 
 @pytest.mark.parametrize("a, b, output", test_cases)
