@@ -40,13 +40,13 @@ for problem_id in "$@"; do
 			# if result contains only . characters, then increment count_perfect_solutions
 			if [[ $result =~ ^[.]+$ ]]; then
 				count_perfect_solutions=$((count_perfect_solutions+1))
-				echo "perfect solutions: $count_perfect_solutions"
 			fi
 		else
 			echo "invalid pytest output for solution $solution_id"
 		fi
 		# invalid output in solution_50936.py
 		echo "total number of solutions: $count_solutions"
+		echo "perfect solutions: $count_perfect_solutions"
 	done
 done
 
