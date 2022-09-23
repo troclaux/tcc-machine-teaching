@@ -30,6 +30,7 @@ do
 		result=${output%% *}
 		echo "result: $result"
 		# echo "output: $output"
+		> output.txt
 		# if result contains only . or F characters, then the test passed
 		if [[ $result =~ ^[.F]+$ ]]; then
 			echo "valid pytest output for solution $solution_id"
