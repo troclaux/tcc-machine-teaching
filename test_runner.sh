@@ -26,8 +26,18 @@ do
 		output=`python3 -m pytest test_$problem_id.py`
 		# save the word after test_$problem_id.py in the variable output
 		output=${output#*test_$problem_id.py }
-		echo "Output: $output"
-		
+		# save the first word in ouput in the variable result
+		result=${output%% *}
+		echo "result: $result"
+		# echo "output: $output"
+		# if result contains only . or F characters, then the test passed
+		if [[ $result =~ ^[.F]+$ ]]; then
+			echo "valid pytest output for solution $solution_id"
+			echo "$result" >> output.txt
+		else
+			echo "invalid pytest output for solution $solution_id"
+		fi
+		# invalid output in solution_50936.py
 	done
 done
 
