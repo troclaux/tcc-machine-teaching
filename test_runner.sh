@@ -21,7 +21,13 @@ do
 		#replace first line of test_$problem_id.py with $import_file
 		sed -i "1s/.*/$import_file/" test_$problem_id.py
 		echo "Running test_$problem_id.py"
-		python3 -m pytest test_$problem_id.py
+		# write pytest output in a file
+		python3 -m pytest test_$problem_id.py> output.txt
+		# save pytest output to a variable
+		output=$(cat output.txt)
+		# save the word after test_$problem_id.py in the variable output
+		output=${output#*test_$problem_id.py }
+		echo "Output: $output"
 	done
 
 done
