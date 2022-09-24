@@ -3,7 +3,7 @@ from solution_57655 import *
 import pytest
 
 test_cases = [
-	('a', 'x', 0, 'a'),
+	('a', 'x', 0, 'x'),
 	('ab', 'x', 1, 'ax'),
 	('ab', 'x', 0, 'xb'),
 ]
