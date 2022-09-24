@@ -9,6 +9,7 @@ for problem_id in "$@"; do
 
 	cd problems/$problem_id
 	count_solutions = 0
+	> output.txt
 
 	# run all files that start with solution_ and end with .py
 	for file in solution_*.py; do
@@ -31,7 +32,6 @@ for problem_id in "$@"; do
 		result=${output%% *}
 		echo "result: $result"
 		# echo "output: $output"
-		> output.txt
 		count_perfect_solutions=0
 		# if result contains only . or F characters, then the test passed
 		if [[ $result =~ ^[.F]+$ ]]; then
