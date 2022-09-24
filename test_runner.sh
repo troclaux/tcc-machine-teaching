@@ -43,6 +43,7 @@ for problem_id in "$@"; do
 			fi
 		else
 			echo "invalid pytest output for solution $solution_id"
+			echo "ERROR" >> output.txt
 		fi
 		# invalid output in solution_50936.py
 		echo "total number of solutions: $count_solutions"
