@@ -1,11 +1,11 @@
-from solution_204984 import *
+from solution_204986 import *
 
 import pytest
 
 test_cases = [
-	("hello word", '2'),
-	(" hello word", '2'),
-	("hello word ", '2')
+	("hello world", '2'),
+	(" hello world", '2'),
+	("hello world ", '2')
 ]
 
 
