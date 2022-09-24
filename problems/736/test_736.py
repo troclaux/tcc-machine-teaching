@@ -1,13 +1,13 @@
-from solution_50914 import *
+from solution_50922 import *
 
 import pytest
 
 test_cases = [
-	('1','','1'),
-	('','1','1'),
+	('1','','11'),
+	('','1','11'),
 	('','',''),
-	('x','y','xy'),
-	('1','2','12'),
+	('x','y','xyyx'),
+	('1','2','1221'),
 ]
 
 @pytest.mark.parametrize("a, b, output", test_cases)
