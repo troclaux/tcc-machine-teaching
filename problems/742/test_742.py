@@ -1,9 +1,11 @@
-from solution_57650 import *
+from solution_57655 import *
 
 import pytest
 
 test_cases = [
-	('hello world', 'i', 0, 'iello world'),
+	('a', 'x', 0, 'a'),
+	('ab', 'x', 1, 'ax'),
+	('ab', 'x', 0, 'xb'),
 ]
 
 @pytest.mark.parametrize("s, x, i, output", test_cases)
