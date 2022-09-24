@@ -1,5 +1,6 @@
 /problems.pkl
 /solutions.pkl
+/draft.ipynb
 
 /problems/*/*
 !/problems/*/test_*.py
