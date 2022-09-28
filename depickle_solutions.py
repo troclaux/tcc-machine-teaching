@@ -2,9 +2,6 @@ import pickle
 import os
 
 with open('solutions.pkl', 'rb') as f:
-
-    solucoes_aprovadas = 0
-    solucoes_reprovadas = 0
     
     i = 0
     data = pickle.load(f)
@@ -22,16 +19,8 @@ with open('solutions.pkl', 'rb') as f:
         if not os.path.exists(path):
             os.makedirs(path)
 
-        # with open(path_txt, 'w', encoding="utf-8") as g:
-        #     g.write(enunciado["outcome"])
         with open(path_id, 'w', encoding="utf-8") as g:
             g.write(enunciado["solution"])
 
-        if enunciado["outcome"] == "F":
-            solucoes_reprovadas = solucoes_reprovadas + 1
-        if enunciado["outcome"] == "P":
-            solucoes_aprovadas = solucoes_aprovadas + 1
-        i += 1
+        
 
-print(f"solucoes aprovadas: {solucoes_aprovadas}")
-print(f"solucoes reprovadas: {solucoes_reprovadas}")
