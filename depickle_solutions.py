@@ -7,7 +7,7 @@ with open('solutions.pkl', 'rb') as f:
     data = pickle.load(f)
     directory = os.getcwd()
 
-    for enunciado in data:
+    for i, enunciado in enumerate(data):
         problem_id = str(enunciado["problem_id"])
         solution_id = "solution_" + str(i) + ".py"
         # solution_txt = str(i) + ".txt"
@@ -21,6 +21,3 @@ with open('solutions.pkl', 'rb') as f:
 
         with open(path_id, 'w', encoding="utf-8") as g:
             g.write(enunciado["solution"])
-
-        
-
