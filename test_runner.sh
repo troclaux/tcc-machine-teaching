@@ -5,8 +5,8 @@
 reset
 
 # for every problem id passed in the command line, run the tests
-for problem_id in "$@"
-do
+for problem_id in "$@"; do
+
 	cd problems/$problem_id
 
 	# run all files that start with solution_ and end with .py
@@ -21,7 +21,10 @@ do
 		#replace first line of test_$problem_id.py with $import_file
 		sed -i "1s/.*/$import_file/" test_$problem_id.py
 		echo "Running test_$problem_id.py"
+		# write pytest output in a file
+		# python3 -m pytest test_$problem_id.py> output.txt
 		python3 -m pytest test_$problem_id.py
+
 	done
 
 done

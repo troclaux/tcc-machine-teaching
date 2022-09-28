@@ -1,6 +1,8 @@
 from itertools import combinations
+import pyperclip
 
-partitions = ['n1', 'n2', 'n3', 'm1', 'm2', 'm3', 'mt1', 'mt2', 'mt3']
+# Particionamento para rp = 3, rs = 3, rpq = 3, rsq = 3
+partitions = [ 'rp1', 'rpq1', 'rs2', 'rsq1']
 
 #pair-wise combination of partitions
 partitions = [element.upper() for element in partitions]
@@ -38,3 +40,4 @@ res = remove_quot(str(combinations))
 res = res[1:-1]
 
 print(res)
+pyperclip.copy(res)
