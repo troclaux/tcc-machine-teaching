@@ -16,7 +16,12 @@ with open('problems.pkl', 'rb') as f:
         path_txt = os.path.join(path, name_id_txt)
         path_df = os.path.join(path, name_id_csv)
         os.makedirs(os.path.dirname(path_txt), exist_ok=True)
-        DataFrame = pd.DataFrame(columns=["ID", "Total_tests", "Passed_tests", "Original_outcome"])
+        DataFrame = pd.DataFrame(
+            columns=["id",
+            "passed_criteria_tests",
+            "passed_graph_tests",
+            "passed_mutation_tests",
+            "original_outcome"])
         DataFrame.to_csv(path_or_buf = path_df, index=False)
 
         with open(path_txt, 'a', encoding="utf-8") as g:
