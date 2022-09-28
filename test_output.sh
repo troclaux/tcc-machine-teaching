@@ -1,6 +1,6 @@
 # para rodar este script no linux:
-# chmod +x test_runner.sh
-# ./test_runner.sh
+# chmod +x test_output.sh
+# ./test_output.sh
 
 reset
 
@@ -36,14 +36,15 @@ for problem_id in "$@"; do
 		# if result contains only . or F characters, then the test passed
 		if [[ $result =~ ^[.F]+$ ]]; then
 			echo "valid pytest output for solution $solution_id"
-			echo "$result" >> output.txt
+			# solution_id .F.F.
+			echo "$solution_id $result" >> output.txt
 			# if result contains only . characters, then increment count_perfect_solutions
 			if [[ $result =~ ^[.]+$ ]]; then
 				count_perfect_solutions=$((count_perfect_solutions+1))
 			fi
 		else
 			echo "invalid pytest output for solution $solution_id"
-			echo "ERROR" >> output.txt
+			echo "$solution_id ERROR" >> output.txt
 		fi
 		# invalid output in solution_50936.py
 		echo "total number of solutions: $count_solutions"
