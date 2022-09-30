@@ -25,9 +25,25 @@ def get_pair_wise_coverage(partition_list):
   return list(combs)
 
 # ACoC
-acoc_partitions = [["a", "b"], ["1", "2", "3"], ["x", "y"]]
+
+# f = 2, v = 3, c = 4
+acoc_partitions = [['f1', 'f2'], ['v1', 'v2', 'v3'], ['c1', 'c2', 'c3', 'c4']]
+
+def capitalize_partitions(partition_list):
+  res = []
+  for partition in partition_list:
+    part = []
+    for element in partition:
+      part.append(element.upper())
+    res.append(part)
+  return res
+
+print(str(capitalize_partitions(acoc_partitions)))
+
+print(str(acoc_partitions))
 
 def get_all_combinations_coverage(partition_list):
+  buffer = capitalize_partitions(partition_list)
   # make combination for a list with any number of partitions
   combs = list(product(*partition_list))
   print(str(combs))
