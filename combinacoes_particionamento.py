@@ -2,6 +2,8 @@ from calendar import c
 from itertools import combinations, product
 import pyperclip
 
+# PW
+
 # Particionamento para rp = 3, rs = 3, rpq = 3, rsq = 3
 partitions = [ 'rp1', 'rpq1', 'rs2', 'rsq1']
 
@@ -40,12 +42,12 @@ def capitalize_partitions(partition_list):
 
 acoc_partitions = (capitalize_partitions(acoc_partitions))
 
-print(str(acoc_partitions))
 
 def get_all_combinations_coverage(partition_list):
   # make combination for a list with any number of partitions
   combs = list(product(*partition_list))
   print(str(combs))
+  return combs
 
 get_all_combinations_coverage(acoc_partitions)
 
