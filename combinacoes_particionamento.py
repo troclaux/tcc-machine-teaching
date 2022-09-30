@@ -45,7 +45,7 @@ print(str(acoc_partitions))
 def get_all_combinations_coverage(partition_list):
   buffer = capitalize_partitions(partition_list)
   # make combination for a list with any number of partitions
-  combs = list(product(*partition_list))
+  combs = list(product(*buffer))
   print(str(combs))
 
 get_all_combinations_coverage(acoc_partitions)
