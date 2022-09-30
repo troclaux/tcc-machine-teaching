@@ -1,4 +1,5 @@
 import pickle
+from tqdm import tqdm
 import os
 
 with open('solutions.pkl', 'rb') as f:
@@ -7,7 +8,7 @@ with open('solutions.pkl', 'rb') as f:
     data = pickle.load(f)
     directory = os.getcwd()
 
-    for i, enunciado in enumerate(data):
+    for i, enunciado in enumerate(tqdm(data)):
         problem_id = str(enunciado["problem_id"])
         solution_id = "solution_" + str(i) + ".py"
         # solution_txt = str(i) + ".txt"
