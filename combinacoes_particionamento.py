@@ -38,14 +38,13 @@ def capitalize_partitions(partition_list):
     res.append(part)
   return res
 
-print(str(capitalize_partitions(acoc_partitions)))
+acoc_partitions = (capitalize_partitions(acoc_partitions))
 
 print(str(acoc_partitions))
 
 def get_all_combinations_coverage(partition_list):
-  buffer = capitalize_partitions(partition_list)
   # make combination for a list with any number of partitions
-  combs = list(product(*buffer))
+  combs = list(product(*partition_list))
   print(str(combs))
 
 get_all_combinations_coverage(acoc_partitions)
