@@ -46,12 +46,8 @@ acoc_partitions = (capitalize_partitions(acoc_partitions))
 def get_all_combinations_coverage(partition_list):
   # make combination for a list with any number of partitions
   combs = list(product(*partition_list))
-  print(str(combs))
   return combs
 
-get_all_combinations_coverage(acoc_partitions)
-
-combinations = get_pair_wise_coverage(partitions)
 
 def remove_quot(myStr):
   outputString = ''
@@ -62,8 +58,22 @@ def remove_quot(myStr):
   return outputString
 
 
-res = remove_quot(str(combinations))
-res = res[1:-1]
+def get_combinations():
+  choice = input("Escolha o tipo de cobertura: \n (1) PW \n (2) ACoC \n")
+  if choice == '1':
+    print("< Pair-wise coverage >")
+    result = get_pair_wise_coverage(partitions)
+    result = remove_quot(str(result))
+    result = result[1:-1]
+    print(result)
+    pyperclip.copy(result)
 
-print(res)
-pyperclip.copy(res)
+  elif choice == '2':
+    print("< All combinations coverage >")
+    result = str(get_all_combinations_coverage(acoc_partitions))
+    result = remove_quot(result)
+    result = result[1:-1]
+    pyperclip.copy(result)
+    print(result)
+
+get_combinations()
