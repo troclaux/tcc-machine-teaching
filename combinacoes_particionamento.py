@@ -1,16 +1,17 @@
 from calendar import c
 from itertools import combinations, product
+from webbrowser import get
 import pyperclip
 
 # PW
 
-# Particionamento para rp = 3, rs = 3, rpq = 3, rsq = 3
-partitions = [ 'rp1', 'rpq1', 'rs2', 'rsq1']
+# Particionamento para f = 2, v = 3, c = 3
+partitions = ['f1', 'f2', 'v1', 'v2', 'v3', 'c1', 'c2', 'c3']
 
 # ACoC
 
-# f = 2, v = 3, c = 4
-acoc_partitions = [['f1', 'f2'], ['v1', 'v2', 'v3'], ['c1', 'c2', 'c3', 'c4']]
+# f = 2, v = 3, c = 3
+acoc_partitions = [['f1', 'f2'], ['v1', 'v2', 'v3'], ['c1', 'c2', 'c3']]
 
 #pair-wise combination of partitions
 partitions = [element.upper() for element in partitions]
@@ -30,6 +31,16 @@ def get_pair_wise_coverage(partition_list):
       combs.remove(combination)
 
   return list(combs)
+
+def get_pair_wise_coverage2(partition_list):
+  combs = list(combinations(partition_list, 2))
+  result = []
+  for i in combs:
+    list_buffer = []
+    list_buffer = [(x, y) for x in i[0] for y in i[1]]
+    for j in list_buffer:
+      result.append(j)
+  return result
 
 def capitalize_partitions(partition_list):
   res = []
@@ -68,7 +79,8 @@ def get_combinations():
   choice = input("Escolha o tipo de cobertura: \n (1) PW \n (2) ACoC \n")
   if choice == '1':
     print("< Pair-wise coverage >")
-    result = convert_partition_to_string(get_pair_wise_coverage(partitions))
+    pw = get_pair_wise_coverage2(acoc_partitions)
+    result = convert_partition_to_string(pw)
     print(result)
     pyperclip.copy(result)
 
