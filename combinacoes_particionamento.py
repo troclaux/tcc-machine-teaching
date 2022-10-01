@@ -1,38 +1,13 @@
-from calendar import c
 from itertools import combinations, product
-from webbrowser import get
 import pyperclip
 
-# PW
-
-# Particionamento para f = 2, v = 3, c = 3
-partitions = ['f1', 'f2', 'v1', 'v2', 'v3', 'c1', 'c2', 'c3']
-
-# ACoC
+# Partitions
 
 # f = 2, v = 3, c = 3
-acoc_partitions = [['f1', 'f2'], ['v1', 'v2', 'v3'], ['c1', 'c2', 'c3']]
+partitions = [['f1', 'f2'], ['v1', 'v2', 'v3'], ['c1', 'c2', 'c3']]
 
-#pair-wise combination of partitions
-partitions = [element.upper() for element in partitions]
-
-#solucao alternativa
-#combs = [(partition1, partition2) for idx, partition1 in enumerate(partitions) for partition2 in partitions[idx + 1:]]
-#print(combs)
-
-def pretty_print_matrix(matrix):
-  print('\n'.join(['\t'.join([str(cell) for cell in row]) for row in matrix]))
 
 def get_pair_wise_coverage(partition_list):
-  combs = list(combinations(partition_list, 2))
-
-  for combination in list(combs):
-    if combination[0][:-1] == combination[1][:-1]:
-      combs.remove(combination)
-
-  return list(combs)
-
-def get_pair_wise_coverage2(partition_list):
   combs = list(combinations(partition_list, 2))
   result = []
   for i in combs:
@@ -51,7 +26,7 @@ def capitalize_partitions(partition_list):
     res.append(part)
   return res
 
-acoc_partitions = (capitalize_partitions(acoc_partitions))
+partitions = (capitalize_partitions(partitions))
 
 
 def get_all_combinations_coverage(partition_list):
@@ -79,14 +54,14 @@ def get_combinations():
   choice = input("Escolha o tipo de cobertura: \n (1) PW \n (2) ACoC \n")
   if choice == '1':
     print("< Pair-wise coverage >")
-    pw = get_pair_wise_coverage2(acoc_partitions)
+    pw = get_pair_wise_coverage(partitions)
     result = convert_partition_to_string(pw)
     print(result)
     pyperclip.copy(result)
 
   elif choice == '2':
     print("< All combinations coverage >")
-    result = convert_partition_to_string(get_all_combinations_coverage(acoc_partitions))
+    result = convert_partition_to_string(get_all_combinations_coverage(partitions))
     print(result)
     pyperclip.copy(result)
 
