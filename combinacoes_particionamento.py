@@ -50,19 +50,19 @@ def convert_partition_to_string(part_input):
   string = string[1:-1]
   return string
 
-def get_combinations():
+def get_combinations(part_input):
   choice = input("Escolha o tipo de cobertura: \n (1) PW \n (2) ACoC \n")
   if choice == '1':
     print("< Pair-wise coverage >")
-    pw = get_pair_wise_coverage(partitions)
+    pw = get_pair_wise_coverage(part_input)
     result = convert_partition_to_string(pw)
     print(result)
     pyperclip.copy(result)
 
   elif choice == '2':
     print("< All combinations coverage >")
-    result = convert_partition_to_string(get_all_combinations_coverage(partitions))
+    result = convert_partition_to_string(get_all_combinations_coverage(part_input))
     print(result)
     pyperclip.copy(result)
 
-get_combinations()
+get_combinations(partitions)
