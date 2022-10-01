@@ -57,23 +57,25 @@ def remove_quot(myStr):
     outputString += character
   return outputString
 
+def convert_partition_to_string(part_input):
+  string = ''
+  string = str(part_input)
+  string = remove_quot(string)
+  string = string[1:-1]
+  return string
 
 def get_combinations():
   choice = input("Escolha o tipo de cobertura: \n (1) PW \n (2) ACoC \n")
   if choice == '1':
     print("< Pair-wise coverage >")
-    result = get_pair_wise_coverage(partitions)
-    result = remove_quot(str(result))
-    result = result[1:-1]
+    result = convert_partition_to_string(get_pair_wise_coverage(partitions))
     print(result)
     pyperclip.copy(result)
 
   elif choice == '2':
     print("< All combinations coverage >")
-    result = str(get_all_combinations_coverage(acoc_partitions))
-    result = remove_quot(result)
-    result = result[1:-1]
-    pyperclip.copy(result)
+    result = convert_partition_to_string(get_all_combinations_coverage(acoc_partitions))
     print(result)
+    pyperclip.copy(result)
 
 get_combinations()
