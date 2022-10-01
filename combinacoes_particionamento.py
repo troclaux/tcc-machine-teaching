@@ -7,6 +7,11 @@ import pyperclip
 # Particionamento para rp = 3, rs = 3, rpq = 3, rsq = 3
 partitions = [ 'rp1', 'rpq1', 'rs2', 'rsq1']
 
+# ACoC
+
+# f = 2, v = 3, c = 4
+acoc_partitions = [['f1', 'f2'], ['v1', 'v2', 'v3'], ['c1', 'c2', 'c3', 'c4']]
+
 #pair-wise combination of partitions
 partitions = [element.upper() for element in partitions]
 
@@ -25,11 +30,6 @@ def get_pair_wise_coverage(partition_list):
       combs.remove(combination)
 
   return list(combs)
-
-# ACoC
-
-# f = 2, v = 3, c = 4
-acoc_partitions = [['f1', 'f2'], ['v1', 'v2', 'v3'], ['c1', 'c2', 'c3', 'c4']]
 
 def capitalize_partitions(partition_list):
   res = []
