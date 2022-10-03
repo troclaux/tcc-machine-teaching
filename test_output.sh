@@ -25,7 +25,7 @@ for problem_id in "$@"; do
 		echo "Running test_$problem_id.py"
 		# write pytest output in a file
 		# python3 -m pytest test_$problem_id.py> output.txt
-		output=`python3 -m pytest test_$problem_id.py`
+		output=`python3 -m pytest --timeout=2 test_$problem_id.py`
 		# save the word after test_$problem_id.py in the variable output
 		output=${output#*test_$problem_id.py }
 		# save the first word in ouput in the variable result
