@@ -39,7 +39,7 @@ def remove_quot(myStr):
   outputString = ''
   for character in myStr:
     if character == "'":
-        continue
+      continue
     outputString += character
   return outputString
 
