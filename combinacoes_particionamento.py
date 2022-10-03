@@ -1,30 +1,38 @@
-from itertools import combinations
+from itertools import combinations, product
 import pyperclip
 
-# Particionamento para rp = 3, rs = 3, rpq = 3, rsq = 3
-partitions = [ 'rp1', 'rpq1', 'rs2', 'rsq1']
+# Partitions
 
-#pair-wise combination of partitions
-partitions = [element.upper() for element in partitions]
+# f = 2, v = 3, c = 3
+partitions = [['f1', 'f2'], ['v1', 'v2', 'v3'], ['c1', 'c2', 'c3']]
 
-#solucao alternativa
-#combs = [(partition1, partition2) for idx, partition1 in enumerate(partitions) for partition2 in partitions[idx + 1:]]
-#print(combs)
 
-def pretty_print_matrix(matrix):
-  print('\n'.join(['\t'.join([str(cell) for cell in row]) for row in matrix]))
-
-def get_requirements(partition_list):
+def get_pair_wise_coverage(partition_list):
   combs = list(combinations(partition_list, 2))
+  result = []
+  for i in combs:
+    list_buffer = []
+    list_buffer = [(x, y) for x in i[0] for y in i[1]]
+    for j in list_buffer:
+      result.append(j)
+  return result
 
-  for combination in list(combs):
-    if combination[0][:-1] == combination[1][:-1]:
-      combs.remove(combination)
+def capitalize_partitions(partition_list):
+  res = []
+  for partition in partition_list:
+    part = []
+    for element in partition:
+      part.append(element.upper())
+    res.append(part)
+  return res
 
-  return list(combs)
+partitions = (capitalize_partitions(partitions))
 
 
-combinations = get_requirements(partitions)
+def get_all_combinations_coverage(partition_list):
+  # make combination for a list with any number of partitions
+  combs = list(product(*partition_list))
+  return combs
 
 
 def remove_quot(myStr):
@@ -35,9 +43,29 @@ def remove_quot(myStr):
     outputString += character
   return outputString
 
+def convert_partition_to_string(part_input):
+  string = ''
+  string = str(part_input)
+  string = remove_quot(string)
+  string = string[1:-1]
+  return string
 
-res = remove_quot(str(combinations))
-res = res[1:-1]
+def get_combinations(part_input):
+  print('\n (1) Pair-wise coverage \n (2) All combinations coverage \n')
+  choice = input("Insira o número do tipo de cobertura desejado: ")
+  print()
+  if choice == '1':
+    print("< Pair-wise coverage >")
+    pw = get_pair_wise_coverage(part_input)
+    result = convert_partition_to_string(pw)
+    print(result)
+    pyperclip.copy(result)
 
-print(res)
-pyperclip.copy(res)
+  elif choice == '2':
+    print("< All combinations coverage >")
+    result = convert_partition_to_string(get_all_combinations_coverage(part_input))
+    print(result)
+    pyperclip.copy(result)
+  print()
+
+get_combinations(partitions)

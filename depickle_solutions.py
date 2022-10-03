@@ -4,7 +4,6 @@ import os
 
 with open('solutions.pkl', 'rb') as f:
     
-    i = 0
     data = pickle.load(f)
     directory = os.getcwd()
 
