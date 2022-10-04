@@ -19,11 +19,11 @@ for problem_id in "$@"; do
 		solution_id=${str:9}
 		echo "$import_file"
 		#replace first line of test_$problem_id.py with $import_file
-		sed -i "1s/.*/$import_file/" test_$problem_id.py
-		echo "Running test_$problem_id.py"
+		sed -i "1s/.*/$import_file/" test_input_$problem_id.py
+		echo "Running test_input_$problem_id.py"
 		# write pytest output in a file
 		# python3 -m pytest test_$problem_id.py> output.txt
-		python3 -m pytest test_$problem_id.py
+		python3 -m pytest test_input_$problem_id.py
 
 	done
 
