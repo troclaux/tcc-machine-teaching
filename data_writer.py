@@ -13,7 +13,7 @@ for problem_id in problems_id:
 
 	output_path = os.path.join(sys.path[0], "problems")
 	output_path = os.path.join(output_path, problem_id)
-	output_path = os.path.join(output_path, "output.txt")
+	output_path = os.path.join(output_path, "output_input.txt")
 	print(output_path)
 	print(problem_id)
 	# try to open file located in output_path, in read mode
