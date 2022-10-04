@@ -1,4 +1,4 @@
-from solution_50922 import *
+from solution_50920 import *
 
 import pytest
 
