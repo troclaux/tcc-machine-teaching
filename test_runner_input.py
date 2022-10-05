@@ -1,6 +1,5 @@
 import os
 import sys
-import subprocess
 
 for problem_id in sys.argv[1:]:
 
@@ -33,6 +32,7 @@ for problem_id in sys.argv[1:]:
 		with open(test_filename, 'w', encoding='utf-8') as file:
 			file.writelines(data)
 
+		os.system("pytest " + test_filename)
 		# os.system("pytest " + test_filename)
 
 	os.chdir('..')
