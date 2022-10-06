@@ -25,11 +25,13 @@ for problem_id in sys.argv[1:]:
 
 		with open(test_filename, 'r', encoding='utf-8') as file:
 			data = file.readlines()
+			file.close()
 
 		data[0] = import_str
 
 		with open(test_filename, 'w', encoding='utf-8') as file:
 			file.writelines(data)
+			file.close()
 
 		cmd = "pytest --tb=line " + test_filename
 		# os.system(cmd)
