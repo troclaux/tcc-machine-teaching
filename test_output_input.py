@@ -2,6 +2,8 @@ import os
 import sys
 import subprocess
 
+os.system('reset')
+
 for problem_id in sys.argv[1:]:
 
 	os.chdir('problems')
@@ -43,8 +45,17 @@ for problem_id in sys.argv[1:]:
 			result = result[2].split(" ")[1]
 			print(f'{solution_id} {result}')
 		except Exception as e:
-			# print("ERROR SECOND PRINT:", e.output.decode('utf-8'))
-			result = "ERROR"
+			# print(f"ERROR {solution_id}:", e.output.decode('utf-8'))
+			e_str = str(e)[-2]
+			if e_str == '1':
+				result = e.output.decode('utf-8').split("collected")[1]
+				result = result.split("\n")
+				result = result[2].split(" ")[1]
+			elif e_str == '2':
+				result = "ERROR"
+			else:
+				result = "UNKNOWN EXIT STATUS"
+
 			print(f'{solution_id} {result}')
 
 	os.chdir('..')
