@@ -18,9 +18,8 @@ for problem_id in sys.argv[1:]:
 		if 'solution_' not in solution_filename:
 			continue
 
-		buffer = solution_filename.split('_')
-		buffer = buffer[1].split('.')
-		solution_id = buffer[0]
+		solution_id = solution_filename[9:-3]
+
 
 		test_filename = "test_input_" + problem_id + ".py"
 		import_str = "from solution_" + solution_id + " import *\n"
