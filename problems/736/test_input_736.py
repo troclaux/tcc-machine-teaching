@@ -41,13 +41,13 @@ lista = [
 
 @pytest.mark.parametrize("a, b, output", test_cases)
 
+#pytest test_input_736.py
 
-def test_concatenacao(a, b, output):
-	for solution in lista:
-		# imp = importlib.import_module(solution)
-		solution_stmt = eval(solution)
-		assert solution_stmt.concatenacao(a, b) == output
-		#print(solution_stmt)
-		#print(type(solution_stmt))
+def test_concatenacao(a, b, output, solution):
+	# imp = importlib.import_module(solution)
+	solution_stmt = eval(solution)
+	assert solution_stmt.concatenacao(a, b) == output
+	#print(solution_stmt)
+	#print(type(solution_stmt))
 
 #test_concatenacao('1','','11')
