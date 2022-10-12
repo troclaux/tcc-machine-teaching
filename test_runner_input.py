@@ -16,24 +16,11 @@ for problem_id in sys.argv[1:]:
 		print(os.getcwd())
 		print(solution_filename)
 
-		buffer = solution_filename.split('_')
-		buffer = buffer[1].split('.')
-		solution_id = buffer[0]
+		solution_id = solution_filename[9:-3]
 
-		test_filename = "test_input_" + problem_id + ".py"
-		import_str = "from solution_" + solution_id + " import *\n"
+		import_str = " import_stmts.solution_" + solution_id
 
-		with open(test_filename, 'r', encoding='utf-8') as file:
-			data = file.readlines()
-
-		print(data)
-		data[0] = import_str
-
-		with open(test_filename, 'w', encoding='utf-8') as file:
-			file.writelines(data)
-
-		os.system("pytest --tb=line " + test_filename)
-		# run previous command and save 
+		os.system("pytest --tb=line --solution " + import_str)
 
 	os.chdir('..')
 
