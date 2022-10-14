@@ -4,10 +4,6 @@ import pytest
 def pytest_addoption(parser):
         parser.addoption("--solution", action="store", default="accident")
 
-#@pytest.fixture()
-#def solution(request):
-#        return request.config.getoption('solution')
-
 def pytest_generate_tests(metafunc):
     option_value = metafunc.config.option.solution
     if 'solution' in metafunc.fixturenames and option_value is not None:
