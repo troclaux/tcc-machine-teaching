@@ -4,12 +4,11 @@ import os
 from tqdm import tqdm
 
 with open('solutions.pkl', 'rb') as f:
-    
+    j = 0
     data = pickle.load(f)
     directory = os.getcwd()
 
     for i, enunciado in enumerate(tqdm(data)):
-        j = 0
         problem_id = str(enunciado["problem_id"])
         solution_id = "solution_" + str(i)
         solution_id_path = "solution_" + str(i) + ".py"
@@ -28,8 +27,8 @@ with open('solutions.pkl', 'rb') as f:
 
         if j == 0:
             with open(path_stmts, 'w', encoding="utf-8") as h:
-                h.write("import " + solution_id)
+                h.write("import " + solution_id + "\n")
                 j += 1
         else:
             with open(path_stmts, 'a', encoding="utf-8") as h:
-                h.write("import " + solution_id)
+                h.write("import " + solution_id + "\n")
