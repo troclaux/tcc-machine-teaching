@@ -18,7 +18,8 @@ for problem_id in sys.argv[1:]:
 		solution_id = solution_filename[9:-3]
 
 		import_str = " import_stmts.solution_" + solution_id
-		cmd = "pytest --tb=line --solution " + import_str
+		test_str = "test_input_" + problem_id + ".py"
+		cmd = f"pytest {test_str} --tb=line --solution {import_str}"
 		# os.system(cmd + " >> output_input.txt")
 
 		try:
