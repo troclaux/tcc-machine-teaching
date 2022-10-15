@@ -1,7 +1,6 @@
 import pickle
 from tqdm import tqdm
 import os
-from tqdm import tqdm
 
 def create_import_stmts():
     path = os.path.join(directory, "problems")

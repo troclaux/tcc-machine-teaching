@@ -1,6 +1,7 @@
 import os
 import sys
 import subprocess
+from tqdm import tqdm
 
 for problem_id in sys.argv[1:]:
 
@@ -10,7 +11,7 @@ for problem_id in sys.argv[1:]:
 
 	pwd_list = sorted(os.listdir())
 
-	for solution_filename in pwd_list:
+	for i, solution_filename in enumerate(tqdm(pwd_list)):
 
 		if 'solution_' not in solution_filename:	
 			continue
