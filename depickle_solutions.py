@@ -3,10 +3,19 @@ from tqdm import tqdm
 import os
 from tqdm import tqdm
 
+def create_import_stmts():
+    path = os.path.join(directory, "problems")
+    #os.system(f"cd {path}")
+    for problem in sorted(os.listdir(path)):
+        path_problem = os.path.join(path, problem)
+        path_stmts = os.path.join(path_problem, "import_stmts.py")
+        os.system(f"> {path_stmts}")
+
 with open('solutions.pkl', 'rb') as f:
-    j = 0
     data = pickle.load(f)
     directory = os.getcwd()
+
+    create_import_stmts()
 
     for i, enunciado in enumerate(tqdm(data)):
         problem_id = str(enunciado["problem_id"])
@@ -25,10 +34,9 @@ with open('solutions.pkl', 'rb') as f:
         with open(path_id, 'w', encoding="utf-8") as g:
             g.write(enunciado["solution"])
 
-        if j == 0:
-            with open(path_stmts, 'w', encoding="utf-8") as h:
-                h.write(f"try:\n\timport {solution_id} \nexcept:\n\tprint('{solution_id} IMPORT ERROR')\n")
-                j += 1
-        else:
-            with open(path_stmts, 'a', encoding="utf-8") as h:
-                h.write(f"try:\n\timport {solution_id} \nexcept:\n\tprint('{solution_id} IMPORT ERROR')\n")
+
+        with open(path_stmts, 'a', encoding="utf-8") as h:
+            h.write(f"try:\n\timport {solution_id} \nexcept:\n\tprint('{solution_id} IMPORT ERROR')\n")
+
+
+
