@@ -40,7 +40,8 @@ for problem_id in sys.argv[1:]:
 				result = "ERROR"
 			else:
 				result = "UNKNOWN EXIT STATUS"
+				
+		os.system(f"echo '{solution_id} {result}'>>output_input.txt")
 
-		print(f'SOLUTION {solution_id}: {result}')
 
 	os.chdir('..')
