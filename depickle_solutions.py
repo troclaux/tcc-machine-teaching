@@ -27,8 +27,8 @@ with open('solutions.pkl', 'rb') as f:
 
         if j == 0:
             with open(path_stmts, 'w', encoding="utf-8") as h:
-                h.write("import " + solution_id + "\n")
+                h.write(f"try:\n\timport {solution_id} \nexcept:\n\tprint('{solution_id} IMPORT ERROR')\n")
                 j += 1
         else:
             with open(path_stmts, 'a', encoding="utf-8") as h:
-                h.write("import " + solution_id + "\n")
+                h.write(f"try:\n\timport {solution_id} \nexcept:\n\tprint('{solution_id} IMPORT ERROR')\n")
