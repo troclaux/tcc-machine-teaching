@@ -10,19 +10,22 @@ for problem_id in sys.argv[1:]:
 	os.system('> output_input.txt')
 
 	pwd_list = sorted(os.listdir())
+	
+	test_str = "test_input_" + problem_id + ".py"
 
 	for i, solution_filename in enumerate(tqdm(pwd_list)):
 
 		if 'solution_' not in solution_filename:	
 			continue
 
+		# extract solution id
 		solution_id = solution_filename[9:-3]
-
 		import_str = " import_stmts.solution_" + solution_id
-		test_str = "test_input_" + problem_id + ".py"
+		# define the command to run
 		cmd = f"pytest {test_str} --tb=line --solution {import_str} --timeout=2"
 		# os.system(cmd + " >> output_input.txt")
 
+		# separate test results from the command output
 		try:
 			output_str = subprocess.check_output(cmd, shell=True).decode('utf-8')
 			result = output_str.split("\n")[9]
