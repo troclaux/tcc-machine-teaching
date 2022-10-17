@@ -1,7 +1,5 @@
 import import_stmts
-import sys
 import pytest
-import importlib
 
 test_cases = [
 	('1','','11'),
@@ -10,8 +8,6 @@ test_cases = [
 	('x','y','xyyx'),
 	('1','2','1221'),
 ]
-
-# imp = importlib.import_module(import_stmt)
 
 @pytest.mark.parametrize("a, b, output", test_cases)
 
