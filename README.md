@@ -2,8 +2,8 @@
 
 ## Para extrair problemas e resuluções do arquivo .pkl
 
-- Execute depickle_problems.py
-- Execute depickle_solutions.py
+1. python3 depickle_problems.py
+2. python3 depickle_solutions.py
 
 ## Para testar todas as resoluções que foram extraídas
 - Existem 3 tipos de critérios:
