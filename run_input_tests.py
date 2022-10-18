@@ -1,5 +1,6 @@
 import os
 import sys
+from tqdm import tqdm
 
 for problem_id in sys.argv[1:]:
 
@@ -10,7 +11,7 @@ for problem_id in sys.argv[1:]:
 
 	test_str = "test_input_" + problem_id + ".py"
 
-	for solution_filename in pwd_list:
+	for i, solution_filename in enumerate(tqdm(pwd_list)):
 
 		if 'solution_' not in solution_filename:
 			continue
@@ -20,7 +21,7 @@ for problem_id in sys.argv[1:]:
 
 		#extract solution id
 		solution_id = solution_filename[9:-3]
-		import_str = " import_stmts.solution_" + solution_id
+		import_str = "solution_" + solution_id
 		# define the command to run
 		cmd = f"pytest {test_str} --tb=line --solution {import_str} --timeout=2"
 		# run test command
