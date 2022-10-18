@@ -1,6 +1,5 @@
-from solution_121511 import *
-
 import pytest
+import importlib
 
 test_cases_all_combinations = [
 	("ok", "oK"),
@@ -41,5 +40,6 @@ test_cases_pair_wise = [
 
 @pytest.mark.parametrize("frase, output", test_cases_pair_wise)
 
-def test_uppCons(frase, output):
-	assert uppCons(frase) == output
+def test_uppCons(frase, output, solution):
+	imp = importlib.import_module(solution)
+	assert imp.uppCons(frase) == output
