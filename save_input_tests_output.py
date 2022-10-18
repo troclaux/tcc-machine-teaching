@@ -20,7 +20,7 @@ for problem_id in sys.argv[1:]:
 
 		# extract solution id
 		solution_id = solution_filename[9:-3]
-		import_str = " import_stmts.solution_" + solution_id
+		import_str = "solution_" + solution_id
 		# define the command to run
 		cmd = f"pytest {test_str} --tb=line --solution {import_str} --timeout=2"
 		# os.system(cmd + " >> output_input.txt")
