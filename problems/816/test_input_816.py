@@ -7,7 +7,7 @@ test_cases = [
 	([2, 1], 0, [1, 2]),
 ]
 
-@pytest.mark.parametrize("lista_numero, n, output", test_cases)
-def test_maiores(lst, n, output, solution):
+@pytest.mark.parametrize("lista, n, output", test_cases)
+def test_maiores(lista, n, output, solution):
 	imp = importlib.import_module(solution)
-	assert imp.maiores(lst, n) == output
+	assert imp.maiores(lista, n) == output
