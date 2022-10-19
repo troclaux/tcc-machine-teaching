@@ -2,7 +2,7 @@ import pytest
 import importlib
 
 test_cases = [
-	('Olá, hoje cheguei no trabalho e perguntei ao meu chefe: - Preciso voltar mais cedo; já que preciso sair 16 horas', 'Olá  hoje cheguei no trabalho e perguntei ao meu chefe   Preciso voltar mais cedo  já que preciso sair 16 horas'),
+	('Olá, hoje cheguei no trabalho e perguntei ao meu chefe: - Preciso voltar mais cedo; já que preciso sair 16 horas', 'Olá  hoje cheguei no trabalho e perguntei ao meu chefe    Preciso voltar mais cedo  já que preciso sair 16 horas'),
 	('Boa noite.', 'Boa noite '),
 ]
 
