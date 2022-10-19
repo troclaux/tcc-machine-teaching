@@ -10,8 +10,8 @@ test_cases = [
 	(3, 2, 2),
 ]
 
-@pytest.mark.parametrize("lista_numero, n, output", test_cases)
+@pytest.mark.parametrize("passageiros, capacidade, output", test_cases)
 
-def test_carros(lista_numero, n, output, solution):
+def test_carros(passageiros, capacidade, output, solution):
 	imp = importlib.import_module(solution)
-	assert imp.carros(lista_numero, n) == output
+	assert imp.carros(passageiros, capacidade) == output
