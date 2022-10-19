@@ -8,8 +8,8 @@ test_cases = [
 	([5, 3, 2], 4),
 ]
 
-@pytest.mark.parametrize("lista_numero, n, output", test_cases)
+@pytest.mark.parametrize("lista_numero, output", test_cases)
 
-def test_faltante(lista_numero, n, output, solution):
+def test_faltante(lista_numero, output, solution):
 	imp = importlib.import_module(solution)
-	assert imp.faltante(lista_numero, n) == output
+	assert imp.faltante(lista_numero) == output
