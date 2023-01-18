@@ -35,6 +35,7 @@ with open('solutions.pkl', 'rb') as f:
 
     cursor.execute("TRUNCATE TABLE solution")
     cursor.execute("TRUNCATE TABLE test")
+    values = []
     for i, enunciado in enumerate(tqdm(data)):
         problem_id = str(enunciado["problem_id"])
         solution_id = "solution_" + str(i)
@@ -51,18 +52,18 @@ with open('solutions.pkl', 'rb') as f:
         if not os.path.exists(path):
             os.makedirs(path)
 
+        values.append((enunciado["problem_id"],solution_outcome))
+
         with open(path_id, 'w', encoding="utf-8") as g:
             g.write(enunciado["solution"])
 
 
         with open(path_stmts, 'a', encoding="utf-8") as h:
             h.write(f"try:\n\timport {solution_id} \nexcept:\n\tprint('{solution_id} IMPORT ERROR')\n")
+        
 
-
-
-        insert_solution = f"INSERT INTO solution (problem_id, old_outcome) VALUES({problem_id} ,{solution_outcome})"
-        cursor.execute(insert_solution)
-        cursor.execute("SELECT * from solution")
+    insert_solution = "INSERT INTO solution (problem_id, old_outcome) VALUES(%s ,%s)"
+    cursor.executemany(insert_solution, values)
 
 
 
