@@ -26,13 +26,14 @@ for problem_id in sys.argv[1:]:
 
 	os.chdir('problems')
 	os.chdir(problem_id)
-	#os.system('> output_input.txt')
 	open("output_input.txt", "w")
 
 	pwd_list = sorted(os.listdir())
 	
 	test_str = "test_input_" + problem_id + ".py"
-	values = []
+	values_solution = []
+	values_test = []
+
 	for i, solution_filename in enumerate(tqdm(pwd_list)):
 
 		if 'solution_' not in solution_filename:	
@@ -42,38 +43,50 @@ for problem_id in sys.argv[1:]:
 		solution_id = solution_filename[9:-3]
 
 		import_str = "solution_" + solution_id
-		log_file = "log_" + solution_id + ".json"
 		cmd = f"pytest {test_str} --tb=line --solution {import_str} --report-log=log.json --timeout=2"
-		#cmd = f"pytest test_input_736.py --tb=line --solution solution_50911 --report-log=log.json --timeout=2"
-		#os.system(cmd + " >> output_input.txt")
-		#os.system(cmd)
-		#subprocess.check_output(cmd, shell=True)
 		subprocess.call(cmd)
-
-		#f = open("log.json")
-		#json_data = json.load(f)
 
 		log = open("log.json", "r")
 		lines = log.readlines()
 
 		test_cases = int((len(lines) - 4)/3)
+		if 'test_metrics' not in locals():
+			test_metrics = [0]*(test_cases*3)
+
 		result = ""
 		new_outcome = 1
-		for test in range(test_cases):
-			if "passed" in lines[4 + 3 * (test)]:
+		for test_id in range(test_cases):
+			temp = 4 + 3 * (test_id)
+			print(lines[temp])
+			if "passed" in lines[4 + 3 * (test_id)]:
 				result = result + "P"
+				test_metrics[test_id*3] = test_metrics[(test_id*3)] + 1
 				continue
-			elif "AssertionError" in lines[4 + 3 * (test)]:
+			elif "AssertionError" in lines[4 + 3 * (test_id)]:
 				result = result + "F"
+				test_metrics[(test_id*3)+1] = test_metrics[(test_id*3)+1] + 1
 				new_outcome = 0
 				continue
 			result = result + "E"
+			test_metrics[(test_id*3)+2] = test_metrics[(test_id*3)+2] + 1
 			new_outcome = 0
 
-		values.append((new_outcome, result, solution_id))
+			values_solution.append((new_outcome, result, solution_id))
+
+		if "solution_50921" in solution_filename:
+			break
+			
+	for test_id in range(test_cases):
+		if "input" in os.path.basename(__file__):
+			criteria = "input"
+		elif "graph" in os.path.basename(__file__):
+			criteria = "graph"
+		else:
+			criteria = "mutation"
+
+		insert_test = f"INSERT INTO test ({test_id},{problem_id},{criteria},{test_metrics[test_id*3]},{test_metrics[(test_id*3)+1]},{test_metrics[(test_id*3)+2]})"
+		cursor.execute(insert_test)
 
 	insert_solution = "INSERT INTO solution (new_outcome, result) VALUES(%s ,%s) WHERE solution_id=%s"
-	cursor.executemany(insert_solution, values)
+	cursor.executemany(insert_solution, values_solution)
 
-
-	os.chdir('..')
