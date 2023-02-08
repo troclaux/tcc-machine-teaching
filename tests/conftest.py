@@ -1,6 +1,3 @@
-#from email.policy import default
-import pytest
-
 def pytest_addoption(parser):
         parser.addoption("--solution", action="store", default="accident")
 

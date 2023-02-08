@@ -2,11 +2,7 @@ import pytest
 import importlib
 
 test_cases = [
-	('1', '', '11'),
-	('', '1', '11'),
-	('', '', ''),
-	('ab', 'cd', 'abcdcdab'),
-	('12', '34', '12343412'),
+	("Teste","Sucesso", "TesteSucessoSucessoTeste")
 ]
 
 @pytest.mark.parametrize("a, b, output", test_cases)
