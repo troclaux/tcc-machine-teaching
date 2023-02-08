@@ -6,13 +6,13 @@
 806 colisao
 807 conta_frases
 809 intercala
-810 inverte
+810 inverte (invertefrase)
 811 colchao
-812 retira_pontuacao
+812 retira_pontuacao (sem pontuação)
 815 insere
 816 maiores
 817 acima_da_media
-819 filtraMultiplos
+819 filtraMultiplos (multiplos)
 820 posLetra
 821 fatorial
 822 repetidos
@@ -21,4 +21,4 @@
 838 num_bombons
 839 carros
 840 bolos
-842 pontos_por_time
+842 pontos_por_time (campeonato)
