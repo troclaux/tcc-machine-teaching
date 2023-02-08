@@ -3,6 +3,4 @@
 /draft*
 
 /problems/*/*
-!/problems/*/test_*.py
-!/problems/*/conftest.py
 /.vscode/
