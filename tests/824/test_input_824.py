@@ -18,7 +18,7 @@ test_cases = [
 	("b x", "B X"),
 	("kd x", "KD X"),
 ]
-
+'''
 test_cases_each_choice = [
 	("e", "e"),
 	("x", "X"),
@@ -37,8 +37,8 @@ test_cases_pair_wise = [
 	("pai", "Pai"),
 	("kd", "KD")
 ]
-
-@pytest.mark.parametrize("frase, output", test_cases_pair_wise)
+'''
+@pytest.mark.parametrize("frase, output", test_cases)
 
 def test_uppCons(frase, output, solution):
 	imp = importlib.import_module(solution)
