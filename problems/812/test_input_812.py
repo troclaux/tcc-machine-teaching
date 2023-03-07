@@ -2,8 +2,8 @@ import pytest
 import importlib
 
 test_cases = [
-	('Olá, hoje cheguei no trabalho e perguntei ao meu chefe: - Preciso voltar mais cedo; já que preciso sair 16 horas', 'Olá  hoje cheguei no trabalho e perguntei ao meu chefe    Preciso voltar mais cedo  já que preciso sair 16 horas'),
-	('Boa noite.', 'Boa noite '),
+	('Durante meu expediente, disse ao meu chefe: - Preciso voltar mais cedo; já que preciso sair 16 horas... Mas já são 17 horas! Como pude esquecer de olhar o relógio?', 'Durante meu expediente  disse ao meu chefe    Preciso voltar mais cedo  já que preciso sair 16 horas    Mas já são 17 horas  Como pude esquecer de olhar o relógio '),
+	('Olá.', 'Olá '),
 ]
 
 @pytest.mark.parametrize("str, output", test_cases)
