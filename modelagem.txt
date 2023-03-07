@@ -21,7 +21,7 @@ AZ2: Primeira string vazia
 BZ1: Segunda string com 1 ou mais caracteres
 BZ2: Segunda string vazia
 
-Criterio de combinação
+Critério de combinação
 Pair-Wise
 
 Requisitos
@@ -63,7 +63,7 @@ E2: String não possui ponto de interrogação
 F1: String possui reticências
 F2: String não possui reticências
 
-Criterio de combinação
+Critério de combinação
 Each Choice
 
 R = {}
@@ -100,7 +100,7 @@ C2: Primeira lista possui tamanho par
 D1: Segunda lista possui tamanho ímpar
 D2: Segunda lista possui tamanho par
 
-Criterio de combinação
+Critério de combinação
 Pair-Wise
 
 Requisitos
@@ -149,20 +149,49 @@ F2: String não possui reticências
 G1: String possui hífen
 G2: String não possui hífen
 
-Criterio de combinação
+Critério de combinação
 Each Choice
 
 R = {}
 
 Casos de testes para satisfação de requisitos
 
-Caso de teste: (string) satisfaz os requisitos ( _ )
+Caso de teste: (string) satisfaz os requisitos ( _ , ... ,  _ )
 
 CT1: ('Hello! My name is Peter. Do you know where is the hospital? My problem is: I ate a lot of food, now I am feeling sick...') satisfaz os requisitos (A2, B1, C1, D1, E1, F1, G2)
 CT2: ('hello-') satisfaz os requisitos (A1, B2, C2, D2, E2, F2, G1)
 
+
 Exercício 811 - colchao
 
+Particionamento
+
+A1: Existe no máximo 1 número maior que a altura da porta
+A2: Existem dois números da lista que são maiores que altura da porta
+A3: Todos os números da lista são maiores que a altura da porta
+
+B1: Existe no máximo 1 número maior que a largura da porta
+B2: Existem dois números da lista que são maiores que largura da porta
+B3: Todos os números da lista são maiores que a largura da porta
+
+Critério de combinação
+Pair-Wise
+
+R = {(A1, B1), (A1, B2), (A1, B3), (A2, B1), (A2, B2), (A2, B3), (A3, B1), (A3, B2), (A3, B3)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (lista, altura, largura) satisfaz os requisitos ( _ ,  _ )
+
+CT1: ([10, 20, 30], 50, 50) satisfaz os requisitos (A1, B1)
+CT2: ([1, 10, 20], 5, 5) satisfaz os requisitos (A2, B2)
+CT3: ([10, 20, 30], 5, 5) satisfaz os requisitos (A3, B3)
+CT4: ([1, 10, 15], 5, 20) satisfaz os requisitos (A2, B1)
+CT5: ([1, 10, 15], 20, 5) satisfaz os requisitos (A1, B2)
+CT6: ([10, 10, 30], 20, 5) satisfaz os requisitos (A1, B3)
+CT7: ([10, 10, 30], 5, 20) satisfaz os requisitos (A3, B1)
+CT8: ([10, 30, 40], 20, 5) satisfaz os requisitos (A2, B3)
+CT9: ([10, 30, 40], 5, 20) satisfaz os requisitos (A3, B2)
 
 
 
