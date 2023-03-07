@@ -66,6 +66,8 @@ F2: String não possui reticências
 Critério de combinação
 Each Choice
 
+Requisitos
+
 R = {}
 
 Casos de testes para satisfação de requisitos
@@ -110,16 +112,16 @@ R = {(A1, B1), (A1, B2), (A1, B3), (A2, B1), (A2, B2), (A2, B3), (A3, B1), (A3, 
 Casos de testes para satisfação de requisitos
 
 Caso de teste: (a, b) satisfaz os requisitos ( _ ,  _ )
-CT1: ([1, 3, 5], [2, 4, 6]) satisfaz os requisitos (A1, B1, C1, D1)
-CT2: (['a', 'b', 'c'], [1, 2, 3]) satisfaz os requisitos (A2, B1, C1, D1)
-CT3: ([1, 'b'], ['a', 2]) satisfaz os requisitos (A3, B3, C2, D2)
-CT4: ([1, 2, 'c'], ['a', 'b', 'c']) satisfaz os requisitos (A3, B2, C1, D1)
-CT5: ([1, 2], ['a', 'b']) satisfaz os requisitos (A1, B2, C2, D2)
-CT6: ([1], ['a', 2, 'b']) satisfaz os requisitos (A1, B2, C1, D1)
-CT7: (['a', 'b'], ['c', 'd']) satisfaz os requisitos (A2, B2, C2, D2)
-CT8: (['a', 2, 'b'], [1, 2]) satisfaz os requisitos (A3, B1, C1, D2)
-CT9: ([1, 2], [3]) satisfaz os requisitos (A1, B1, C2, D1)
-CT10: (['a'], [1, 'b']) satisfaz os requisitos (A2, B3, C1, D2)
+CT1: ([1, 3, 5], [2, 4, 6]) satisfaz os requisitos (A1, B1), (A1, C1), (A1, D1), (B1, C1), (B1, D1), (C1, D1)
+CT2: (['a', 'b', 'c'], [1, 2, 3]) satisfaz os requisitos (A2, B1), (A2, C1), (A2, D1), (B1, C1), (B1, D1), (C1, D1)
+CT3: ([1, 'b'], ['a', 2]) satisfaz os requisitos (A3, B3), (A3, C2), (A3, D2), (B3, C2), (B3, D2), (C2, D2)
+CT4: ([1, 2, 'c'], ['a', 'b', 'c']) satisfaz os requisitos (A3, B2), (A3, C1), (A3, D1), (B2, C1), (B2, D1), (C1, D1)
+CT5: ([1, 2], ['a', 'b']) satisfaz os requisitos (A1, B2), (A1, C2), (A1, D2), (B2, C2), (B2, D2), (C2, D2)
+CT6: ([1], ['a', 2, 'b']) satisfaz os requisitos (A1, B2), (A1, C1), (A1, D1), (B2, C1), (B2, D1), (C1, D1)
+CT7: (['a', 'b'], ['c', 'd']) satisfaz os requisitos (A2, B2), (A2, C2), (A2, D2), (B2, C2), (B2, D2), (C2, D2)
+CT8: (['a', 2, 'b'], [1, 2]) satisfaz os requisitos (A3, B1), (A3, C1), (A3, D2), (B1, C1), (B1, D2), (C1, D2)
+CT9: ([1, 2], [3]) satisfaz os requisitos (A1, B1), (A1, C2), (A1, D1), (B1, C2), (B1, D1), (C2, D1)
+CT10: (['a'], [1, 'b']) satisfaz os requisitos (A2, B3), (A2, C1), (A2, D2), (B3, C1), (B3, D2), (C1, D2)
 
 	('Hello! My name is Peter. Do you know where is the hospital? My problem is: I ate a lot of food, now I am feeling sick...', 'sick feeling am i now food of lot a ate i is problem my hospital the is where know you do peter is name my hello'),
 	('hello-', 'hello'),
@@ -152,6 +154,8 @@ G2: String não possui travessão
 Critério de combinação
 Each Choice
 
+Requisitos
+
 R = {}
 
 Casos de testes para satisfação de requisitos
@@ -176,6 +180,8 @@ B3: Todos os números da lista são maiores que a largura da porta
 
 Critério de combinação
 Pair-Wise
+
+Requisitos
 
 R = {(A1, B1), (A1, B2), (A1, B3), (A2, B1), (A2, B2), (A2, B3), (A3, B1), (A3, B2), (A3, B3)}
 
@@ -233,6 +239,8 @@ J2: Frase não possui travessão
 Critério de combinação
 Each Choice
 
+Requisitos
+
 R = {}
 
 Casos de testes para satisfação de requisitos
@@ -242,3 +250,34 @@ Caso de teste: (string) satisfaz os requisitos ( _ , ... ,  _ )
 CT1: ('Durante meu expediente, disse ao meu chefe: - Preciso voltar mais cedo; já que preciso sair 16 horas... Mas já são 17 horas! Como pude esquecer de olhar o relógio?') satisfaz os requisitos (A2, B2, C1, D1, E1, F1, G1, H1, I1, J1)
 CT2: ('Olá.') satisfaz os requisitos (A1, B1, C2, D2, E2, F2, G2, H2, I2, J2)
 
+Exercício 815 - insere
+
+Particionamento
+
+A1: Número a ser inserido já existe na lista
+A2: Número a ser inserido não existe na lista
+
+B1: Número a ser inserido na lista é igual ou maior que zero
+B2: Número a ser inserido na lista é negativo
+
+C1: Número é inserido na primeira posição da lista
+C2: Número é inserido entre a primeira e a última posição da lista
+C3: Número é inserido na última posição da lista
+
+Critério de combinação
+Pair-Wise
+
+Requisitos
+
+R = {(A1, B1), (A1, B2), (A2, B1), (A2, B2), (A1, C1), (A1, C2), (A1, C3), (A2, C1), (A2, C2), (A2, C3), (B1, C1), (B1, C2), (B1, C3), (B2, C1), (B2, C2), (B2, C3)}
+
+Casos de teste para satisfação de requisitos
+
+Caso de teste: (lista, número) satisfaz os requisitos ( _ ,  _ )
+
+CT1: ([1, 2, 3], 1) satisfaz os requisitos (A1, B1), (A1, C1), (B1, C1)
+CT2: ([-2, -1, 3, 4], -1) satisfaz os requisitos (A1, B2), (A1, C2), (B2, C2)
+CT3: ([1, 2, 5], 4) satisfaz os requisitos (A2, B1), (A2, C2), (B1, C2)
+CT4: ([-2, 1, 5], -3) satisfaz os requisitos (A2, B2), (A2, C1), (B2, C1)
+CT5: ([1, 2, 3], 4) satisfaz os requisitos (A2, B1), (A2, C3), (B1, C3)
+CT6: ([-4, -3, -2, -1], -1) satisfaz os requisitos (A1, B2), (A1, C3), (B2, C3)
