@@ -446,3 +446,40 @@ CT4: (5) satisfaz os requisitos (N2, P1)
 CT5: (6) satisfaz os requisitos (N3, P2)
 CT6: (7) satisfaz os requisitos (N3, P1)
 
+Exercício 822 - repetidos
+
+Particionamento
+
+T1: Lista com apenas números inteiros
+T2: Lista com apenas números float
+T3: Lista com números inteiros e float
+
+S1: Lista com apenas números positivos
+S2: Lista com apenas números negativos
+S3: Lista com números positivos e negativos
+
+P1: 2 primeiras posições da lista não são repetidas
+P2: 2 primeiras posições da lista são repetidas
+
+U1: 2 últimas posições da lista não são repetidas
+U2: 2 últimas posições da lista são repetidas
+
+R1: Lista não possui números consecutivos repetidos
+R2: Sequência mais longa de números repetidos consecutivos possui comprimento igual a 2
+R3: Sequência mais longa de números repetidos consecutivos possui comprimento maior ou igual a 3
+
+
+Critério de combinação
+Each Choice
+
+Requisitos
+
+R = {(T1, T2, T3, S1, S2, S3, P1, P2, U1, U2, R1, R2, R3)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (lista) satisfaz os requisitos ( _ ,  _ , ... )
+
+CT1: ([1, 2, 3, 4, 5]) satisfaz os requisitos (T1, S1, P1, U1, R1)
+CT2: ([-1.0, -1.0, -3.0, -2.0, -2.0]) satisfaz os requisitos (T2, S2, P2, U2, R2)
+CT4: ([1, 1, 1, -2.0, -2.0, -2.0, 3, 3, 3, 3]) satisfaz os requisitos (T3, S3, P2, U2, R3)
