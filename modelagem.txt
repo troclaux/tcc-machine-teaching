@@ -314,3 +314,39 @@ CT3: ([1, 3, -1, 2, 0], 2) satisfaz os requisitos (Z2, N1), (Z2, E1), (N1, E1)
 CT4: ([1, 3, -1, 2, 0], -1) satisfaz os requisitos (Z2, N2), (Z2, E1), (N2, E1)
 CT5: ([1, 3, -1, 2, 0], 4) satisfaz os requisitos (Z2, N1), (Z2, E2), (N1, E2)
 
+Exercício 817 - acima_da_media
+
+Particionamento
+
+T1: Lista com apenas valores inteiros
+T2: Lista com apenas valores float
+T3: Lista com valores inteiros e float
+
+O1: Lista com elementos em ordem crescente
+O2: Lista com elementos em ordem decrescente
+O3: Lista com elementos em ordem que não é crescente nem decrescente
+
+R1: Lista com elementos repetidos
+R2: Lista sem elementos repetidos
+
+Critério de combinação
+Pair-Wise
+
+Requisitos
+
+R = {(T1, O1), (T1, O2), (T1, O3), (T2, O1), (T2, O2), (T2, O3), (T3, O1), (T3, O2), (T3, O3), (T1, R1), (T1, R2), (T2, R1), (T2, R2), (T3, R1), (T3, R2), (O1, R1), (O1, R2), (O2, R1), (O2, R2), (O3, R1), (O3, R2)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (lista) satisfaz os requisitos ( _ ,  _ )
+
+CT1: ([1, 2, 3, 4, 5]) satisfaz os requisitos (T1, O1), (T1, R2), (O1, R2)
+CT2: ([5, 4, 3, 1, 1]) satisfaz os requisitos (T1, O2), (T1, R1), (O2, R1)
+CT3: ([5, 3, 1, 2, 4]) satisfaz os requisitos (T1, O3), (T1, R2), (O3, R2)
+CT4: ([1.0, 2.0, 3.0, 4.0, 5.0]) satisfaz os requisitos (T2, O1), (T2, R2), (O1, R2)
+CT5: ([5.0, 4.0, 3.0, 1.0, 1.0]) satisfaz os requisitos (T2, O2), (T2, R1), (O2, R1)
+CT6: ([5.0, 3.0, 1.0, 2.0, 3.0]) satisfaz os requisitos (T2, O3), (T2, R1), (O3, R1)
+CT7: ([1, 2.0, 3, 4.0, 5, 5]) satisfaz os requisitos (T3, O1), (T3, R1), (O1, R1)
+CT8: ([5, 4.0, 3, 2.0, 1]) satisfaz os requisitos (T3, O2), (T3, R2), (O2, R2)
+CT9: ([5, 3.0, 1, 2.0, 4]) satisfaz os requisitos (T3, O3), (T3, R2), (O3, R2)
+
