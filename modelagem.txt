@@ -417,3 +417,32 @@ CT4: ("boa noite", "a", 4) satisfaz os requisitos (P2, E1), (P2, N2), (E1, N2)
 CT5: ("feliz natal", "g", 2) satisfaz os requisitos (P2, E3), (P2, N2), (E3, N2)
 CT6: ("feliz", "g", 1) satisfaz os requisitos (P1, E3), (P1, N1), (E3, N1)
 
+Exercício 821 - fatorial
+
+Particionamento
+
+N1: n = 0
+N2: 0 < n <= 5
+N3: n > 5
+
+P1: Número é ímpar
+P2: Número é par
+
+Critério de combinação
+Pair-Wise
+
+Requisitos
+
+R = {(N1, P1), (N1, P2), (N2, P1), (N2, P2), (N3, P1), (N3, P2)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (n) satisfaz os requisitos ( _ ,  _ )
+
+CT1: (0) satisfaz os requisitos (N1, P2)
+CT2: (1) satisfaz os requisitos (N2, P1)
+CT3: (2) satisfaz os requisitos (N2, P2)
+CT4: (5) satisfaz os requisitos (N2, P1)
+CT5: (6) satisfaz os requisitos (N3, P2)
+CT6: (7) satisfaz os requisitos (N3, P1)
+
