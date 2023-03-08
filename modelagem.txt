@@ -458,15 +458,15 @@ S1: Lista com apenas números positivos
 S2: Lista com apenas números negativos
 S3: Lista com números positivos e negativos
 
-P1: 2 primeiras posições da lista não são repetidas
-P2: 2 primeiras posições da lista são repetidas
+P1: As 2 primeiras posições da lista não são repetidas
+P2: As 2 primeiras posições da lista são repetidas
 
-U1: 2 últimas posições da lista não são repetidas
-U2: 2 últimas posições da lista são repetidas
+U1: As 2 últimas posições da lista não são repetidas
+U2: As 2 últimas posições da lista são repetidas
 
 R1: Lista não possui números consecutivos repetidos
 R2: Sequência mais longa de números repetidos consecutivos possui comprimento igual a 2
-R3: Sequência mais longa de números repetidos consecutivos possui comprimento maior ou igual a 3
+R3: Sequência mais longa de números repetidos consecutivos possui comprimento igual ou maior que 3
 
 
 Critério de combinação
