@@ -386,3 +386,34 @@ CT4: ([1.0, 2.0, 3.0, 4.0, 5.0], -2) satisfaz os requisitos (L2, N1), (L2, S2), 
 CT5: ([1, 2.0, 3, 4.0, 5], 2) satisfaz os requisitos (L3, N1), (L3, S1), (N1, S1)
 CT6: ([1, 2.0, 3, 4.0, 5], -2.0) satisfaz os requisitos (L3, N2), (L3, S2), (N2, S2)
 
+Exercício 820 - posLetra
+
+Particionamento
+
+P1: Frase contém apenas 1 palavra
+P2: Frase contém mais de 1 palavra
+
+E1: Frase possui 1 ocorrência da letra
+E2: Frase possui mais de 1 ocorrência da letra
+E3: Frase não possui ocorrência da letra
+
+N1: Número de ocorrência é ímpar
+N2: Número de ocorrência é par
+
+Critério de combinação
+Pair-Wise
+
+Requisitos
+R = {(P1, E1), (P1, E2), (P1, E3), (P2, E1), (P2, E2), (P2, E3), (P1, N1), (P1, N2), (P2, N1), (P2, N2), (E1, N1), (E1, N2), (E2, N1), (E2, N2), (E3, N1), (E3, N2)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (frase, letra, n) satisfaz os requisitos ( _ ,  _ )
+
+CT1: ("bola", "a", 1) satisfaz os requisitos (P1, E1), (P1, N1), (E1, N1)
+CT2: ("palavra", "a", 2) satisfaz os requisitos (P1, E2), (P1, N2), (E2, N2)
+CT3: ("boa partida", "a", 3) satisfaz os requisitos (P2, E2), (P2, N1), (E2, N1)
+CT4: ("boa noite", "a", 4) satisfaz os requisitos (P2, E1), (P2, N2), (E1, N2)
+CT5: ("feliz natal", "g", 2) satisfaz os requisitos (P2, E3), (P2, N2), (E3, N2)
+CT6: ("feliz", "g", 1) satisfaz os requisitos (P1, E3), (P1, N1), (E3, N1)
+
