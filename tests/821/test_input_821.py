@@ -2,9 +2,12 @@ import pytest
 import importlib
 
 test_cases = [
-	(5, 120),
-	(4, 24),
 	(0, 1),
+	(1, 1),
+	(2, 2),
+	(5, 120),
+	(6, 720),
+	(7, 5040),
 ]
 
 @pytest.mark.parametrize("numero, output", test_cases)
