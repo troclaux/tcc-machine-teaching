@@ -2,11 +2,12 @@ import pytest
 import importlib
 
 test_cases = [
-	("ola", "a", 1, 2),
-	("boa noite", "u", 2, -1),
-	("boa noite", "o", 2, 5),
-	("ola", "e", 2, -1),
-	("boa noite", "u", 1, -1),
+	("bola", "a", 1, 3),
+	("palavra", "a", 2, 3),
+	("boa partida", "a", 3, 10),
+	("boa noite", "a", 4, -1),
+	("feliz natal", "g", 2, -1),
+	("feliz", "g", 1, -1)
 ]
 
 @pytest.mark.parametrize("frase, letra, ocorrencia, output", test_cases)
