@@ -581,3 +581,28 @@ CT1: (0, 10) satisfaz os requisitos (P1, M1, PT1, MT1, C1)
 CT2: (7.5, 7.5) satisfaz os requisitos (P2, M2, PT2, MT2, C2)
 CT3: (10, 7.5) satisfaz os requisitos (P2, M2, PT1, MT2, C3)
 
+Exercício 839 - carros
+
+Particionamento
+
+P1: Número de pessoas (p) é zero
+P2: Número de pessoas (p) é maior que zero
+
+C1: p <= c
+C2: p > c
+
+Critério de combinação
+Pair-Wise
+
+Requisitos
+
+R = {(P1, C1), (P2, C1), (P2, C2)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (p, c) satisfaz os requisitos ( _ ,  _ )
+
+CT1: (0, 10) satisfaz os requisitos (P1, C1)
+CT2: (7, 33) satisfaz os requisitos (P2, C1)
+CT3: (33, 10) satisfaz os requisitos (P2, C2)
+CT4: (10, 10) satisfaz os requisitos (P2, C1)
