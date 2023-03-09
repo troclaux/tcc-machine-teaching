@@ -4,10 +4,10 @@ import importlib
 test_cases = [
 	# Cada carro pode armazenar 5 pessoas
 	# (passageiros, capacidade, número de carros necessários)
-	(0, 1, 0),
-	(2, 3, 1),
-	(4, 2, 2),
-	(3, 2, 2),
+	(0, 10, 0),
+	(7, 33, 1),
+	(33, 10, 4),
+	(10, 10, 1),
 ]
 
 @pytest.mark.parametrize("passageiros, capacidade, output", test_cases)
