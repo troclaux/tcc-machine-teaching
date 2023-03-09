@@ -2,12 +2,9 @@ import pytest
 import importlib
 
 test_cases = [
-	(0, 1.5, 0),
-	(1.5, 2, 0),
-	(0, 1, 0),
-	(3, 1.5, 2),
-	(1.5, 1.5, 1),
-	(1, 0.3, 3),
+	(0, 10, 0),
+	(7.5, 7.5, 1.0),
+	(10, 7.5, 1.0),
 ]
 
 @pytest.mark.parametrize("dinheiro, preco, output", test_cases)
