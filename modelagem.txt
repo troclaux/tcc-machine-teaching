@@ -517,3 +517,32 @@ CT7: ([5, 6, 3, 4, 2]) satisfaz os requisitos (O3, F1)
 CT8: ([3, 4, 5, 1, 2]) satisfaz os requisitos (O3, F2)
 CT9: ([4, 2, 1, 6, 5]) satisfaz os requisitos (O3, F3)
 
+
+Exercício 824 - uppCons
+
+Particionamento
+
+P1: Frase contém apenas uma palavra
+P2: Frase contém mais de uma palavra
+
+T1: Frase contém apenas vogais
+T2: Frase contém apenas consoantes
+T3: Frase contém vogais e consoantes
+
+Critério de combinação
+Pair-Wise
+
+Requisitos
+R = {(P1, T1), (P1, T2), (P1, T3), (P2, T1), (P2, T2), (P2, T3)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (frase) satisfaz os requisitos ( _ ,  _ )
+
+CT1: ("aeiou") satisfaz os requisitos (P1, T1)
+CT2: ("bcdfgh") satisfaz os requisitos (P1, T2)
+CT3: ("palavra") satisfaz os requisitos (P1, T3)
+CT4: ("aeiou ou") satisfaz os requisitos (P2, T1)
+CT5: ("bcdfgh jklmn") satisfaz os requisitos (P2, T2)
+CT6: ("exemplo de frase") satisfaz os requisitos (P2, T3)
+
