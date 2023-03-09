@@ -546,3 +546,38 @@ CT4: ("aeiou ou") satisfaz os requisitos (P2, T1)
 CT5: ("bcdfgh jklmn") satisfaz os requisitos (P2, T2)
 CT6: ("exemplo de frase") satisfaz os requisitos (P2, T3)
 
+
+Exercício 838 - num_bombons
+
+Particionamento
+
+P1: Preço do bombom (p) é zero
+P2: Preço do bombom (p) é maior que zero
+
+PT1: p é integer
+PT2: p é float
+
+M1: Dinheiro (m) é zero
+M2: Dinheiro (m) é maior que zero
+
+MT1: m é integer
+MT2: m é float
+
+C1: m < p
+C2: m = p
+C3: m > p
+
+Critério de combinação
+Each Choice
+
+Requisitos
+R = {(P1, P2, PT1, PT2, M1, M2, MT1, MT2, C1, C2, C3)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (m, p) satisfaz os requisitos ( _ ,  _ )
+
+CT1: (0, 10) satisfaz os requisitos (P1, M1, PT1, MT1, C1)
+CT2: (7.5, 7.5) satisfaz os requisitos (P2, M2, PT2, MT2, C2)
+CT3: (10, 7.5) satisfaz os requisitos (P2, M2, PT1, MT2, C3)
+
