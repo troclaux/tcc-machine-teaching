@@ -681,3 +681,28 @@ CT2: (10, 5, 10, 8, 11, 11) satisfaz os requisitos (C1, E3, S3, T1, F1)
 CT3: (5, 20, -1, 11, 2, -5) satisfaz os requisitos (C3, E1, S1, T3, F3)
 
 
+Exercício freq_palavras
+
+Particionamento
+
+S1: String tem uma palavra
+S2: String tem 2 palavras ou mais
+
+R1: String não possui palavras repetidas
+R2: Todas as palavras da string se repetem
+R3: String possui palavras que se repetem e palavras que não se repetem
+
+Critério de combinação
+Pair-Wise
+
+Requisitos
+R = {(S1, R1), (S2, R1), (S2, R2), (S2, R3)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (frase) satisfaz os requisitos ( _ ,  _ )
+
+CT1: ('adonalsium') satisfaz os requisitos (S1, R1)
+CT2: ('life is what happens to us while we are making other plans') satisfaz os requisitos (S2, R1)
+CT2: ('dance dance dance') satisfaz os requisitos (S2, R2)
+CT3: ('tell me what you pay attention to and I will tell you who you are') satisfaz os requisitos (S2, R3)
