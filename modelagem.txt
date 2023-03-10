@@ -624,3 +624,60 @@ CT9: (22, 0, 30) satisfaz os requisitos (A3, B1), (A3, C3), (B1, C3)
 CT10: (7, 9, 5) satisfaz os requisitos (A3, B3), (A3, C2), (B3, C2)
 CT11: (11, 17, 26) satisfaz os requisitos (A3, B3), (A3, C3), (B3, C3)
 
+
+Exercício 842 - pontos_por_time
+
+# C, Ce, Cs, Fv, Fe, Fs
+# C = número de vitórias do Cormengo
+# Ce = número de empates do Cormengo
+# Cs = número de saldo de gols do Cormengo
+# Fv = número de vitórias do Flaminthians
+# Fe = número de empates do Flaminthians
+# Fs = número de saldo de gols do Flaminthians
+
+# Vitória = 3 pontos
+# Empate = 1 ponto
+
+# Pontos >>> gols
+
+# Entrada: 10,5,18,11,2,18 ; Saı́da: ’Empate’
+# Entrada: 10,5,18,11,1,18 ; Saı́da: ’Cormengo’
+# Entrada: 9,5,-1,10,2,10 ; Saı́da: ’Flaminthias’
+
+Particionamento
+
+C1: C > F
+C2: C = F
+C3: C < F
+
+E1: Ce > Fe
+E2: Ce = Fe
+E3: Ce < Fe
+
+S1: Cs > Fs
+S2: Cs = Fs
+S3: Cs < Fs
+
+T1: Cs > 0
+T2: Cs = 0
+T3: Cs < 0
+
+F1: Fs > 0
+F2: Fs = 0
+F3: Fs < 0
+
+Critério de combinação
+Each Choice
+
+Requisitos
+R = {(C1, C2, C3, E1, E2, E3, S1, S2, S3, T1, T2, T3, F1, F2, F3)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (C, Ce, Cs, Fv, Fe, Fs) satisfaz os requisitos ( _ ,  _ , ... )
+
+CT1: (0, 0, 0, 0, 0, 0) satisfaz os requisitos (C2, E2, S2, T2, F2)
+CT2: (10, 5, 10, 8, 11, 11) satisfaz os requisitos (C1, E3, S3, T1, F1)
+CT3: (5, 20, -1, 11, 2, -5) satisfaz os requisitos (C3, E1, S1, T3, F3)
+
+
