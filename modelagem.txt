@@ -1,10 +1,3 @@
-
-    ('1', '', '11'),
-    ('', '1', '11'),
-    ('', '', ''),
-    ('ab', 'cd', 'abcdcdab'),
-    ('12', '34', '12343412'),
-
 Exercício 736 - concatenacao
 
 Particionamento
@@ -38,9 +31,6 @@ CT4: ('x','y') satisfaz os requisitos (A2, B2), (A2, AZ1), (A2, BZ1), (B2, AZ1),
 CT5: ('1','2') satisfaz os requisitos (A1, B1), (A1, AZ1), (A1, BZ1), (B1, AZ1), (B1, BZ1), (AZ1, BZ1)
 
 
-    ('Meu deus! Que horas são? Vou perder a minha aula...', 3),
-    ('Olá.', 1)
-
 Exercício 807 - conta_frases
 
 Particionamento
@@ -72,13 +62,6 @@ Caso de teste: (string) satisfaz os requisitos ( _ ,  _ )
 
 CT1: ('Olá.') satisfaz os requisitos (A1, B1, C2, D2, E2, F2)
 CT2: ('Meu deus! Que horas são? Vou perder a minha aula...') satisfaz os requisitos (A2, B2, C1, D1, E1, F1)
-
-	([1, 3, 5], [2, 4, 6], [1, 2, 3, 4, 5, 6]),
-	(['a', 'b', 'c'], [1, 2, 3], ['a', 1, 'b', 2, 'c', 3]),
-	([1, 2, 'c'], ['a', 'b', 'c'], [1, 'a', 2, 'b', 'c', 'c']),
-	(['a', 'b', 'c'], ['a', 'b', 'c'], ['a', 'a', 'b', 'b', 'c', 'c']),
-	([1, 2, 3], [1, 2, 3], [1, 1, 2, 2, 3, 3]),
-	([1, 2, 3], ['a', 'b', 'c'], [1, 'a', 2, 'b', 3, 'c']),
 
 
 Exercício 809 - intercala
@@ -120,8 +103,6 @@ CT8: (['a', 2, 'b'], [1, 2]) satisfaz os requisitos (A3, B1), (A3, C1), (A3, D2)
 CT9: ([1, 2], [3]) satisfaz os requisitos (A1, B1), (A1, C2), (A1, D1), (B1, C2), (B1, D1), (C2, D1)
 CT10: (['a'], [1, 'b']) satisfaz os requisitos (A2, B3), (A2, C1), (A2, D2), (B3, C1), (B3, D2), (C1, D2)
 
-	('Hello! My name is Peter. Do you know where is the hospital? My problem is: I ate a lot of food, now I am feeling sick...', 'sick feeling am i now food of lot a ate i is problem my hospital the is where know you do peter is name my hello'),
-	('hello-', 'hello'),
 
 Exercício 810 - inverte
 
@@ -196,8 +177,6 @@ CT7: ([10, 10, 30], 5, 20) satisfaz os requisitos (A3, B1)
 CT8: ([10, 30, 40], 20, 5) satisfaz os requisitos (A2, B3)
 CT9: ([10, 30, 40], 5, 20) satisfaz os requisitos (A3, B2)
 
-	('Olá, hoje cheguei no trabalho e perguntei ao meu chefe: - Preciso voltar mais cedo; já que preciso sair 16 horas', 'Olá  hoje cheguei no trabalho e perguntei ao meu chefe    Preciso voltar mais cedo  já que preciso sair 16 horas'),
-	('Boa noite.', 'Boa noite '),
 
 Exercício 812 - retira_pontuacao
 
@@ -247,6 +226,7 @@ Caso de teste: (string) satisfaz os requisitos ( _ , ... ,  _ )
 CT1: ('Durante meu expediente, disse ao meu chefe: - Preciso voltar mais cedo; já que preciso sair 16 horas... Mas já são 17 horas! Como pude esquecer de olhar o relógio?') satisfaz os requisitos (A2, B2, C1, D1, E1, F1, G1, H1, I1, J1)
 CT2: ('Olá.') satisfaz os requisitos (A1, B1, C2, D2, E2, F2, G2, H2, I2, J2)
 
+
 Exercício 815 - insere
 
 Particionamento
@@ -280,10 +260,6 @@ CT5: ([1, 2, 3], 4) satisfaz os requisitos (A2, B1), (A2, C3), (B1, C3)
 CT6: ([-4, -3, -2, -1], -1) satisfaz os requisitos (A1, B2), (A1, C3), (B2, C3)
 
 
-	([1, 2], 3, []),
-	([-2, 1], -2, [1]),
-	([2, 1], 0, [1, 2]),
-
 Exercício 816 - maiores
 
 Particionamento
@@ -313,6 +289,7 @@ CT2: ([2, 0, 3, 1], -1) satisfaz os requisitos (Z1, N2), (Z1, E2), (N2, E2)
 CT3: ([1, 3, -1, 2, 0], 2) satisfaz os requisitos (Z2, N1), (Z2, E1), (N1, E1)
 CT4: ([1, 3, -1, 2, 0], -1) satisfaz os requisitos (Z2, N2), (Z2, E1), (N2, E1)
 CT5: ([1, 3, -1, 2, 0], 4) satisfaz os requisitos (Z2, N1), (Z2, E2), (N1, E2)
+
 
 Exercício 817 - acima_da_media
 
@@ -350,9 +327,6 @@ CT7: ([1, 2.0, 3, 4.0, 5, 5]) satisfaz os requisitos (T3, O1), (T3, R1), (O1, R1
 CT8: ([5, 4.0, 3, 2.0, 1]) satisfaz os requisitos (T3, O2), (T3, R2), (O2, R2)
 CT9: ([5, 3.0, 1, 2.0, 4]) satisfaz os requisitos (T3, O3), (T3, R2), (O3, R2)
 
-	([1, 2], 2, [2]),
-	([-1.1, -3.3, -2.2], -1.1, [-1.1, -3.3, -2.2]),
-	([3, 5], 4, []),
 
 Exercício 819 - filtraMultiplos
 
@@ -386,6 +360,7 @@ CT4: ([1.0, 2.0, 3.0, 4.0, 5.0], -2) satisfaz os requisitos (L2, N1), (L2, S2), 
 CT5: ([1, 2.0, 3, 4.0, 5], 2) satisfaz os requisitos (L3, N1), (L3, S1), (N1, S1)
 CT6: ([1, 2.0, 3, 4.0, 5], -2.0) satisfaz os requisitos (L3, N2), (L3, S2), (N2, S2)
 
+
 Exercício 820 - posLetra
 
 Particionamento
@@ -416,6 +391,7 @@ CT3: ("boa partida", "a", 3) satisfaz os requisitos (P2, E2), (P2, N1), (E2, N1)
 CT4: ("boa noite", "a", 4) satisfaz os requisitos (P2, E1), (P2, N2), (E1, N2)
 CT5: ("feliz natal", "g", 2) satisfaz os requisitos (P2, E3), (P2, N2), (E3, N2)
 CT6: ("feliz", "g", 1) satisfaz os requisitos (P1, E3), (P1, N1), (E3, N1)
+
 
 Exercício 821 - fatorial
 
@@ -581,6 +557,7 @@ CT1: (0, 10) satisfaz os requisitos (P1, M1, PT1, MT1, C1)
 CT2: (7.5, 7.5) satisfaz os requisitos (P2, M2, PT2, MT2, C2)
 CT3: (10, 7.5) satisfaz os requisitos (P2, M2, PT1, MT2, C3)
 
+
 Exercício 839 - carros
 
 Particionamento
@@ -633,7 +610,7 @@ R = {(A1, B1), (A1, B2), (A1, B3), (A2, B1), (A2, B2), (A2, B3), (A3, B1), (A3, 
 
 Casos de testes para satisfação de requisitos
 
-Caso de teste: (a, b, c) satisfaz os requisitos ( _ ,  _ ,  _ )
+Caso de teste: (a, b, c) satisfaz os requisitos ( _ ,  _ )
 
 CT1: (0, 0, 0) satisfaz os requisitos (A1, B1), (A1, C1), (B1, C1)
 CT2: (0, 3, 5) satisfaz os requisitos (A1, B2), (A1, C2), (B1, C2)
