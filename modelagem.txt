@@ -606,3 +606,44 @@ CT1: (0, 10) satisfaz os requisitos (P1, C1)
 CT2: (7, 33) satisfaz os requisitos (P2, C1)
 CT3: (33, 10) satisfaz os requisitos (P2, C2)
 CT4: (10, 10) satisfaz os requisitos (P2, C1)
+
+
+Exercício 840 - bolos
+
+Particionamento
+
+A1: a = 0 (xícaras de farinha)
+A2: a = 2
+A3: a > 2
+
+B1: b = 0 (número de ovos)
+B2: b = 3
+B3: b > 3
+
+C1: c = 0 (colheres de leite)
+C2: c = 5
+C3: c > 5
+
+Critério de combinação
+Pair-Wise
+
+Requisitos
+
+R = {(A1, B1), (A1, B2), (A1, B3), (A2, B1), (A2, B2), (A2, B3), (A3, B1), (A3, B2), (A3, B3), (A1, C1), (A1, C2), (A1, C3), (A2, C1), (A2, C2), (A2, C3), (A3, C1), (A3, C2), (A3, C3), (B1, C1), (B1, C2), (B1, C3), (B2, C1), (B2, C2), (B2, C3), (B3, C1), (B3, C2), (B3, C3)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (a, b, c) satisfaz os requisitos ( _ ,  _ ,  _ )
+
+CT1: (0, 0, 0) satisfaz os requisitos (A1, B1), (A1, C1), (B1, C1)
+CT2: (0, 3, 5) satisfaz os requisitos (A1, B2), (A1, C2), (B1, C2)
+CT3: (0, 11, 11) satisfaz os requisitos (A1, B3), (A1, C3), (B1, C3)
+CT4: (2, 0, 5) satisfaz os requisitos (A2, B1), (A2, C2), (B1, C2)
+CT5: (2, 3, 0) satisfaz os requisitos (A2, B2), (A2, C1), (B2, C1)
+CT6: (2, 11, 11) satisfaz os requisitos (A2, B3), (A2, C3), (B2, C3)
+CT7: (25, 8, 0) satisfaz os requisitos (A3, B3), (A3, C1), (B3, C1)
+CT8: (17, 3, 20) satisfaz os requisitos (A3, B2), (A3, C3), (B2, C3)
+CT9: (22, 0, 30) satisfaz os requisitos (A3, B1), (A3, C3), (B1, C3)
+CT10: (7, 9, 5) satisfaz os requisitos (A3, B3), (A3, C2), (B3, C2)
+CT11: (11, 17, 26) satisfaz os requisitos (A3, B3), (A3, C3), (B3, C3)
+
