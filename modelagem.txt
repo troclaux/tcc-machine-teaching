@@ -706,3 +706,54 @@ CT1: ('adonalsium') satisfaz os requisitos (S1, R1)
 CT2: ('life is what happens to us while we are making other plans') satisfaz os requisitos (S2, R1)
 CT2: ('dance dance dance') satisfaz os requisitos (S2, R2)
 CT3: ('tell me what you pay attention to and I will tell you who you are') satisfaz os requisitos (S2, R3)
+
+
+Exercício total
+
+Particionamento
+
+A1: Lista contém amaciante
+A2: Lista não contém amaciante
+
+B1: Lista contém arroz
+B2: Lista não contém arroz
+
+C1: Lista contém biscoito
+C2: Lista não contém biscoito
+
+D1: Lista contém café
+D2: Lista não contém café
+
+E1: Lista contém café
+E2: Lista não contém café
+
+F1: Lista contém farinha
+F2: Lista não contém farinha
+
+G1: Lista possui 1 item
+G2: Lista possui 2 ou mais itens
+
+H1: Lista não possui itens repetidos
+H2: Lista possui itens repetidos
+
+Critério de combinação
+Each Choice
+
+Requisitos
+R = {}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (compras, produtos) satisfaz os requisitos ( _ ,  _, ... )
+
+produtos = {
+    ’amaciante’:4.99,
+    ’arroz’:10.90,
+    ’biscoito’:1.69,
+    ’cafe’:6.98,
+    ’chocolate’:3.79,
+    ’farinha’:2.99
+}
+
+CT1: ([’amaciante’, ’arroz’, 'arroz', ’biscoito’, ’cafe’, 'biscoito' ,'arroz',’chocolate’], produtos) satisfaz os requisitos (A1, B1, C1, D1, E1, F2, G2, H2)
+CT2: (['farinha']) satisfaz os requisitos (A2, B2, C2, D2, E2, F1, G1, H1)
