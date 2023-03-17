@@ -3,8 +3,10 @@ import pyperclip
 
 # Partitions
 
-# f = 2, v = 3, c = 3
-partitions = [['f1', 'f2'], ['v1', 'v2', 'v3'], ['c1', 'c2', 'c3']]
+# a = 2
+# b = 2
+# c = 2
+partitions = [['a1', 'a2'], ['b1', 'b2'], ['c1', 'c2']]
 
 
 def get_pair_wise_coverage(partition_list):
