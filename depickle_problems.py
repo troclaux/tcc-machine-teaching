@@ -3,7 +3,7 @@ import os
 import pandas as pd
 import shutil
 
-problem_ids = [736, 742, 744, 751, 804, 806, 807, 809, 810, 811, 812, 815, 816, 817, 819, 820, 821, 822, 823, 824, 838, 839, 840, 842]
+problem_ids = [736, 742, 744, 751, 798, 800, 804, 806, 807, 809, 810, 811, 812, 815, 816, 817, 819, 820, 821, 822, 823, 824, 827, 828, 829, 831, 832, 833, 834, 835, 836, 838, 839, 840, 842]
 criteria = ["input", "graph", "mutation"]
 directory = os.getcwd()
 path_csv =  os.path.join(directory, "CSV")

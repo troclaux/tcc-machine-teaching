@@ -2,10 +2,11 @@ import pytest
 import importlib
 
 test_cases = [
-	("frente pra tras", "tras pra frente")
+	([[1,2], [3,4]], 2),
+	([], True)
 ]
 
 @pytest.mark.parametrize("a, output", test_cases)
-def test_inverte(a, output, solution):
+def test_eh_quadrada(a, output, solution):
 	imp = importlib.import_module(solution)
-	assert imp.inverte(a) == output
+	assert imp.eh_quadrada(a) == output

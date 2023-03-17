@@ -2,10 +2,12 @@ import pytest
 import importlib
 
 test_cases = [
-	("frente pra tras", "tras pra frente")
+	(0, 0),
+	(1, 1.0),
+	(2, 1.5)
 ]
 
 @pytest.mark.parametrize("a, output", test_cases)
-def test_inverte(a, output, solution):
+def test_soma_h(a, output, solution):
 	imp = importlib.import_module(solution)
-	assert imp.inverte(a) == output
+	assert imp.some_h(a) == output
