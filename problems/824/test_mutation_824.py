@@ -1,9 +1,11 @@
-from unittest import TestCase, main
-from lab7 import uppCons
+import pytest
+import importlib
 
-class TestaUppCons(TestCase):
-    def test_simples(self):
-        self.assertEqual(uppCons('abcdefghi'),'aBCDeFGHi')
+test_cases = [
+    ('abcdefghi','aBCDeFGHi')
+]
 
-if __name__ == '__main__':
-    main()
+@pytest.mark.parametrize("a, output", test_cases)
+def test_uppCons(a, output, solution):
+	imp = importlib.import_module(solution)
+	assert imp.uppCons(a) == output

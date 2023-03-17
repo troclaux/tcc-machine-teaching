@@ -1,6 +1,5 @@
-from solution_57655 import *
-
 import pytest
+import importlib
 
 test_cases = [
 	('a', 'x', 0, 'x'),
@@ -10,5 +9,6 @@ test_cases = [
 
 @pytest.mark.parametrize("s, x, i, output", test_cases)
 
-def test_substitui(s, x, i, output):
-	assert substitui(s, x, i) == output
+def test_substitui(s, x, i, output, solution):
+	imp = importlib.import_module(solution)
+	assert imp.substitui(s, x, i) == output

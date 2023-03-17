@@ -1,6 +1,5 @@
-from solution_37112 import *
-
 import pytest
+import importlib
 
 test_cases = [
 	((0, 0, 1, 1), (0, 0, 1, 1), True),
@@ -11,5 +10,6 @@ test_cases = [
 
 @pytest.mark.parametrize("tupla1, tupla2, output", test_cases)
 
-def test_colisao(tupla1, tupla2, output):
-	assert colisao(tupla1, tupla2) == output
+def test_colisao(tupla1, tupla2, output, solution):
+	imp = importlib.import_module(solution)
+	assert imp.colisao(tupla1, tupla2) == output

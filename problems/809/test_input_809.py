@@ -1,6 +1,5 @@
-from solution_172571 import *
-
 import pytest
+import importlib
 
 test_cases = [
 	([1, 3, 5], [2, 4, 6], [1, 2, 3, 4, 5, 6]),
@@ -13,5 +12,6 @@ test_cases = [
 
 @pytest.mark.parametrize("lista1, lista2, output", test_cases)
 
-def test_intercala(lista1, lista2, output):
-	assert intercala(lista1, lista2) == output
+def test_intercala(lista1, lista2, output, solution):
+	imp = importlib.import_module(solution)
+	assert imp.intercala(lista1, lista2) == output

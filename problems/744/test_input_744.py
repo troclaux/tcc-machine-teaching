@@ -1,6 +1,5 @@
-from solution_26712 import *
-
 import pytest
+import importlib
 
 test_cases = [
 	('', '###'),
@@ -11,5 +10,6 @@ test_cases = [
 
 @pytest.mark.parametrize("s, output", test_cases)
 
-def test_hashtag(s, output):
-	assert hashtag(s) == output
+def test_hashtag(s, output, solution):
+	imp = importlib.import_module(solution)
+	assert imp.hashtag(s) == output

@@ -2,6 +2,8 @@
 742 substitui
 744 hashtag
 751 quant_palavras
+798 freq_palavras
+800 total
 804 filtra_pares
 806 colisao
 807 conta_frases
@@ -18,6 +20,15 @@
 822 repetidos
 823 faltante
 824 uppCons
+827 qtd_divisores
+828 primo
+829 soma_h
+831 lingua_p
+832 eh_quadrada (quadrada)
+833 conta_numero
+834 media_matriz
+835 melhor_volta
+836 busca
 838 num_bombons
 839 carros
 840 bolos

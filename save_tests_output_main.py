@@ -116,5 +116,5 @@ def save_tests_output(criterion,problem_id):
 
 
 #save_tests_output("input",742)
-#save_tests_output("graph",742)
-save_tests_output("mutation",840)
+#save_tests_output("graph",810)
+#save_tests_output("mutation",840)
