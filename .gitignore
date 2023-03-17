@@ -1,6 +1,7 @@
 /problems.pkl
 /solutions.pkl
 /draft*
-
-/problems/*/*
+/Fig
+/CSV
+/problems
 /.vscode/
