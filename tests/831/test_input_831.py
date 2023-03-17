@@ -8,8 +8,8 @@ test_cases = [
 	('NÃO', 'nãpãopo'),
 ]
 
-@pytest.mark.parametrize("lista, output", test_cases)
+@pytest.mark.parametrize("palavra, output", test_cases)
 
-def test_lingua_p(lista, output, solution):
+def test_lingua_p(palavra, output, solution):
 	imp = importlib.import_module(solution)
-	assert imp.lingua_p(lista) == output
+	assert imp.lingua_p(palavra) == output
