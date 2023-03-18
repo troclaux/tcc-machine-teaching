@@ -30,6 +30,33 @@ CT3: ( '' , '' ) satisfaz os requisitos (A2, B2), (A2, AZ2), (A2, BZ2), (B2, AZ2
 CT4: ('x','y') satisfaz os requisitos (A2, B2), (A2, AZ1), (A2, BZ1), (B2, AZ1), (B2, BZ1), (AZ1, BZ1)
 CT5: ('1','2') satisfaz os requisitos (A1, B1), (A1, AZ1), (A1, BZ1), (B1, AZ1), (B1, BZ1), (AZ1, BZ1)
 
+Exercício 742 - substitui
+
+Particionamento
+
+S1: String possui apenas 1 caractere
+S2: String possui mais de 1 caractere
+
+P1: String possui apenas 1 palavra
+P2: String possui mais de 1 palavra
+
+I1: i = 0
+I2: 0 < i ≤ len(s)
+
+Critério de combinação
+Pair-Wise
+
+Requisitos
+R = {(S1, P1), (S1, P2), (S2, P1), (S2, P2), (S1, I1), (S1, I2), (S2, I1), (S2, I2), (P1, I1), (P1, I2), (P2, I1), (P2, I2)}
+
+Casos de testes para satisfação de requisitos
+Caso de teste: (s, x, i) satisfaz os requisitos ( _ ,  _ )
+
+CT1: ('a', 'b', 0) satisfaz os requisitos (S1, P1), (S1, I1), (P1, I1)
+CT2: ('b', 'c', 0) satisfaz os requisitos (S1, P1), (S1, I2), (P1, I2)
+CT3: ('efgh ijkl mnop', 'q', 0) satisfaz os requisitos (S2, P2), (S2, I1), (P2, I1)
+CT4: ('palavra', 'x', 6) satisfaz os requisitos (S2, P1), (S2, I2), (P1, I2)
+CT5: ('rst uvwxy', 'z', 8) satisfaz os requisitos (S2, P2), (S2, I2), (P2, I2)
 
 Exercício 807 - conta_frases
 
