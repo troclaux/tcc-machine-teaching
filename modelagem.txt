@@ -843,3 +843,38 @@ CT3: (97) satisfaz os requisitos (N1, M2)
 CT4: (101) satisfaz os requisitos (N1, M3)
 CT5: (100) satisfaz os requisitos (N2, M2)
 CT6: (102) satisfaz os requisitos (N2, M3)
+
+
+Exercício 834 - media_matriz
+
+Particionamento
+
+A1: Matriz é quadrada
+A2: Matriz tem mais linhas que colunas
+A3: Matriz tem mais colunas que linhas
+
+S1: Matriz possui apenas números maiores ou iguais a zero
+S2: Matriz possui pelo menos 1 número negativo
+
+T1: Matriz possui apenas 1 elemento
+T2: Matriz possui de 2 a 10 elementos
+T3: Matriz possui mais de 10 elementos
+
+Critério de combinação
+Pair-Wise
+
+Requisitos
+R = {(A1, S1), (A1, S2), (A2, S1), (A2, S2), (A3, S1), (A3, S2), (A1, T1), (A1, T2), (A1, T3), (A2, T1), (A2, T2), (A2, T3), (A3, T1), (A3, T2), (A3, T3), (S1, T1), (S1, T2), (S1, T3), (S2, T1), (S2, T2), (S2, T3)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (matriz) satisfaz os requisitos ( _ ,  _ )
+
+CT1: ([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) satisfaz os requisitos (A1, S1), (A1, T2), (S1, T2)
+CT2: ([[-5]]) satisfaz os requisitos (A1, S2), (A1, T1), (S2, T1)
+CT3: ([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]) satisfaz os requisitos (A1, S1), (A1, T3), (S1, T3)
+CT4: ([[1]]) satisfaz os requisitos (A1, S1), (A1, T1), (S1, T1)
+CT5: ([[-1, -2], [-3, -4], [-5,-6]]) satisfaz os requisitos (A2, S2), (A2, T2), (S2, T2)
+CT6: ([[1, 2, 0], [0, 5, 6], [7, 0, 9], [10, 11, 0]]) satisfaz os requisitos (A2, S1), (A2, T3), (S1, T3)
+CT7: ([[-1, 2, 3, -4], [-5, -6, -7, 8], [9, -10, -11, -12]]) satisfaz os requisitos (A3, S2), (A3, T3), (S2, T3)
+CT8: ([[30, 95]]) satisfaz os requisitos (A3, S1), (A3, T2), (S1, T2)
