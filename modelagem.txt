@@ -708,7 +708,7 @@ CT2: ('dance dance dance') satisfaz os requisitos (S2, R2)
 CT3: ('tell me what you pay attention to and I will tell you who you are') satisfaz os requisitos (S2, R3)
 
 
-Exercício total
+Exercício 800 - total
 
 Particionamento
 
@@ -747,16 +747,16 @@ Casos de testes para satisfação de requisitos
 Caso de teste: (compras, produtos) satisfaz os requisitos ( _ ,  _, ... )
 
 produtos = {
-    ’amaciante’:4.99,
-    ’arroz’:10.90,
-    ’biscoito’:1.69,
-    ’cafe’:6.98,
-    ’chocolate’:3.79,
-    ’farinha’:2.99
+    "amaciante":4.99,
+    "arroz":10.90,
+    "biscoito":1.69,
+    "cafe":6.98,
+    "chocolate":3.79,
+    "farinha":2.99
 }
 
-CT1: ([’amaciante’, ’arroz’, 'arroz', ’biscoito’, ’cafe’, 'biscoito' ,'arroz',’chocolate’], produtos) satisfaz os requisitos (A1, B1, C1, D1, E1, F2, G2, H2)
-CT2: (['farinha'], produtos) satisfaz os requisitos (A2, B2, C2, D2, E2, F1, G1, H1)
+CT1: (["amaciante", "arroz", 'arroz', "biscoito", "cafe", 'biscoito' ,'arroz',"chocolate"], produtos) satisfaz os requisitos (A1, B1, C1, D1, E1, F2, G2, H2)
+CT2: (["farinha"], produtos) satisfaz os requisitos (A2, B2, C2, D2, E2, F1, G1, H1)
 
 
 Exercício 831 - lingua_p
@@ -787,4 +787,31 @@ CT1: ('tu') satisfaz os requisitos (A1, M1), (A1, S1), (M1, S1)
 CT2: ('PaLAvRA') satisfaz os requisitos (A1, M2), (A1, S2), (M2, S2)
 CT3: ('proporção') satisfaz os requisitos (A2, M1), (A2, S2), (M1, S2)
 CT4: ('NÃO') satisfaz os requisitos (A2, M2), (A2, S1), (M2, S1)
+
+
+Exercício 827 - qnt_divisores
+
+Particionamento
+
+N1: Número é par
+N2: Número é ímpar
+
+P1: Número não é primo
+P2: Número é primo
+
+Critério de combinação
+Pair-Wise
+
+Requisitos
+
+R = {(N1, P1), (N1, P2), (N2, P1), (N2, P2)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (n) satisfaz os requisitos ( _ ,  _ )
+
+CT1: (96) satisfaz os requisitos (N1, P1)
+CT2: (2) satisfaz os requisitos (N1, P2)
+CT3: (102) satisfaz os requisitos (N2, P1)
+CT4: (101) satisfaz os requisitos (N2, P2)
 
