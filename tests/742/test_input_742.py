@@ -2,9 +2,11 @@ import pytest
 import importlib
 
 test_cases = [
-	('a', 'x', 0, 'x'),
-	('ab', 'x', 1, 'ax'),
-	('ab', 'x', 0, 'xb'),
+	('a', 'b', 0, 'b'),
+	('c', 'd', 0, 'd'),
+	('efgh ijkl mnop', 'q', 0, 'qfgh ijkl mnop'),
+	('palavra', 'x', 6, 'palavrx'),
+	('rst uvwxy', 'z', 8, 'rst uvwxz'),
 ]
 
 @pytest.mark.parametrize("s, x, i, output", test_cases)
