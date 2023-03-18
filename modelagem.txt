@@ -815,3 +815,31 @@ CT2: (2) satisfaz os requisitos (N1, P2)
 CT3: (102) satisfaz os requisitos (N2, P1)
 CT4: (101) satisfaz os requisitos (N2, P2)
 
+
+Exercício 828 - primo
+
+Particionamento
+
+N1: Número é ímpar
+N2: Número é par
+
+M1: n = 1
+M2: 1 < n <= 100
+M3: 100 < n
+
+Critério de combinação
+Pair-Wise
+
+Requisitos
+R = {(N1, M1), (N1, M2), (N1, M3), (N2, M1), (N2, M2), (N2, M3)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (n) satisfaz os requisitos ( _ ,  _ )
+
+CT1: (1) satisfaz os requisitos (N1, M1)
+CT2: (2) satisfaz os requisitos (N2, M1)
+CT3: (97) satisfaz os requisitos (N1, M2)
+CT4: (101) satisfaz os requisitos (N1, M3)
+CT5: (100) satisfaz os requisitos (N2, M2)
+CT6: (102) satisfaz os requisitos (N2, M3)
