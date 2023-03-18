@@ -1,28 +1,22 @@
 import pytest
 import importlib
 
+# Input:
+# [['Cormengo', 'Flamínthians', [1, 0]], ['Flamínthians', 'Cormengo', [2, 2]]]
 
-# C, Ce, Cs, Fv, Fe, Fs
-# C = número de vitórias do Cormengo
-# Ce = número de empates do Cormengo
-# Cs = número de saldo de gols do Cormengo
-# Fv = número de vitórias do Flaminthians
-# Fe = número de empates do Flaminthians
-# Fs = número de saldo de gols do Flaminthians
-
-# Vitória = 3 pontos
-# Empate = 1 ponto
-
-# Pontos >>> gols
-
-# Entrada: 10,5,18,11,2,18 ; Saı́da: ’Empate’
-# Entrada: 10,5,18,11,1,18 ; Saı́da: ’Cormengo’
-# Entrada: 9,5,-1,10,2,10 ; Saı́da: ’Flaminthias’
+# Output:
+# {'Cormengo': 4, 'Flamínthians': 1}
 
 test_cases = [
-	(0, 0, 0, 0, 0, 0, 'Empate'),
-	(10, 5, 10, 8, 11, 11, 'Flaminthias'),
-	(5, 20, -1, 11, 2, -5, 'Cormengo'),
+	([['Cormengo', 'Flamínthians', [1, 0]], ['Flamínthians', 'Cormengo', [2, 2]]], {'Cormengo': 4, 'Flamínthians': 1}),
+	([['Cormengo', 'Flamínthians', [0, 1]], ['Flamínthians', 'Cormengo', [2, 2]]], {'Cormengo': 1, 'Flamínthians': 4}),
+	([['Cormengo', 'Flamínthians', [1, 1]], ['Flamínthians', 'Cormengo', [2, 2]]], {'Cormengo': 2, 'Flamínthians': 2}),
+	([['Cormengo', 'Flamínthians', [1, 0]], ['Flamínthians', 'Cormengo', [2, 1]]], {'Cormengo': 3, 'Flamínthians': 3}),
+	([['Cormengo', 'Flamínthians', [0, 1]], ['Flamínthians', 'Cormengo', [2, 1]]], {'Cormengo': 0, 'Flamínthians': 6}),
+	([['Cormengo', 'Flamínthians', [1, 1]], ['Flamínthians', 'Cormengo', [2, 1]]], {'Cormengo': 1, 'Flamínthians': 4}),
+	([['Cormengo', 'Flamínthians', [1, 0]], ['Flamínthians', 'Cormengo', [1, 2]]], {'Cormengo': 6, 'Flamínthians': 0}),
+	([['Cormengo', 'Flamínthians', [0, 1]], ['Flamínthians', 'Cormengo', [1, 2]]], {'Cormengo': 3, 'Flamínthians': 3}),
+	([['Cormengo', 'Flamínthians', [1, 1]], ['Flamínthians', 'Cormengo', [1, 2]]], {'Cormengo': 4, 'Flamínthians': 1}),
 ]
 
 @pytest.mark.parametrize("lista, output", test_cases)
