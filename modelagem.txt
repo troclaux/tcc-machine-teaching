@@ -947,20 +947,35 @@ CT7: [
     [6.0, 7.0, 8.0, 9.0, 10.0, 2.0, 3.0, 4.0, 5.0, 1.0]
 ] satisfaz o requisito (M3)
 
+
 Exercício 836 - busca
 
 Particionamento
 
-S1: String do setor possui está presente na terceira coluna da matriz
-S2: String do setor possui não está na matriz
+S1: String setor possui apenas letras minúsculas
+S2: String setor possui pelo menos 1 letra maiúscula
 
-Requisitos
+T1: String setor possui apenas 1 palavra
+T2: String setor possui 2 palavras ou mais
 
-R = {}
+Critério de combinação
+Pair-Wise
+
+R = {(S1, T1), (S1, T2), (S2, T1), (S2, T2)}
 
 Casos de testes para satisfação de requisitos
 
+matriz = [
+    ["ArthurMoreiraDeAlbuquerque", "0123456789", "TI", "(11) 99999-9999"],
+    ["ChristianDeMagalhãesPereira", "9876543210", "Medicina", "(99) 88888-8888"],
+    ["JoãoDaSilva", "1234567890", "Engenharia Mecatrônica", "+55 (88) 11111-1111"],
+    ["MariaDeSouza", "0987654321", "contabilidade", "(11) 22222-2222"],
+    ["PedroAlves", "1234567890", "engenharia de produção", "8172733881"]
+]
+
 Caso de teste: (setor, matriz) satisfaz o requisito ( _ )
 
-CT1: ("RecursosHumanos") satisfaz o requisito (S1)
-CT2: ("setor") satisfaz o requisito (S2)
+CT1: ("contabilidade", matriz) satisfaz os requisitos (S1, T1)
+CT2: ("engenharia de produção", matriz) satisfaz os requisitos (S1, T2)
+CT3: ("TI", matriz) satisfaz os requisitos (S2, T1)
+CT4: ("Engenharia Mecatrônica", matriz) satisfaz os requisitos (S2, T2)
