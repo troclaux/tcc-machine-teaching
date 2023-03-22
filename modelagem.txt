@@ -866,6 +866,36 @@ CT4: (101) satisfaz os requisitos (N1, M3)
 CT5: (100) satisfaz os requisitos (N2, M2)
 CT6: (102) satisfaz os requisitos (N2, M3)
 
+Exercício 829 - soma_h
+
+Particionamento
+
+N0: n = 0
+N1: n = 1
+N2: 1 < n ≤ 10
+N3: 10 < n
+
+P1: n é ímpar
+P2: n é par
+
+Critério de combinação
+Pair-Wise
+
+Requisitos
+
+R = {(N0, P2), (N1, P1), (N1, P2), (N2, P1), (N2, P2), (N3, P1), (N3, P2)}
+
+Casos de testes para satisfação de requisitos
+
+Caso de teste: (n) satisfaz os requisitos ( _ ,  _ )
+
+CT1: (1) satisfaz os requisitos (N1, P1)
+CT2: (9) satisfaz os requisitos (N2, P1)
+CT3: (2) satisfaz os requisitos (N2, P2)
+CT4: (11) satisfaz os requisitos (N3, P1)
+CT5: (12) satisfaz os requisitos (N3, P2)
+CT6: (0) satisfaz os requisitos (N0, P2)
+
 
 Exercício 834 - media_matriz
 
