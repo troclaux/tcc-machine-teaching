@@ -3,13 +3,9 @@ import importlib
 
 test_cases = [
 	('hello', 1),
-	(' hello', 1),
-	('hello ', 1),
-	(' hello ', 1),
-	('hello world', 2),
-	(' hello world', 2),
-	('hello world ', 2),
-	(' hello world ', 2),
+	('journey before destination ', 3),
+	(' i solemnly swear that i am up to no good', 10),
+	(' adonalsium ', 1),
 ]
 
 @pytest.mark.parametrize("frase, output", test_cases)
