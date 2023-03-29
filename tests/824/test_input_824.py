@@ -28,7 +28,7 @@ import importlib
 test_cases = [
 	("aeiou", "aeiou"),
 	("bcdfgh", "BCDFGH"),
-	("palavra", "PaLaVRA"),
+	("palavra", "PaLaVRa"),
 	("aeiou ou", "aeiou ou"),
 	("bcdfgh jklmn", "BCDFGH JKLMN"),
 	("exemplo de frase", "eXeMPLo De FRaSe"),
