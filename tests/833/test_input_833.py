@@ -12,12 +12,12 @@ test_cases = [
     ([[-1]], -1, 1),
     ([[-1, -1]], -1, 2),
     ([[2, 3]], 1, 0),
-    ([[1, 2]], 1, 1), 
+    ([[1, 2]], 1, 1)
 ]
 
 @pytest.mark.parametrize("numero, matriz, output", test_cases)
 
-def test_lingua_p(numero, matriz, output, solution):
+def test_conta_numero(numero, matriz, output, solution):
 	imp = importlib.import_module(solution)
-	assert imp.lingua_p(numero, matriz) == output
+	assert imp.conta_numero(numero, matriz) == output
 
