@@ -26,25 +26,12 @@ import importlib
 # ]
 
 test_cases = [
-
 	("aeiou", "aeiou"),
 	("bcdfgh", "BCDFGH"),
 	("palavra", "PaLaVRA"),
 	("aeiou ou", "aeiou ou"),
 	("bcdfgh jklmn", "BCDFGH JKLMN"),
 	("exemplo de frase", "eXeMPLo De FRaSe"),
-
-	# ("ok","oK"),
-	# ("nunca", "NuNCa"),
-	# ("a", "a"),
-	# ("b", "B"),
-	# ("a b", "a B"),
-	# ("a e", "a e"),
-	# ("b c", "B C"),
-	# ("e kd", "e KD"),
-	# ("pai", "Pai"),
-	# ("kd", "KD")
-
 ]
 
 @pytest.mark.parametrize("frase, output", test_cases)
