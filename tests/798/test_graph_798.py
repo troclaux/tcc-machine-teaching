@@ -4,7 +4,7 @@ import importlib
 test_cases = [
 	("", {}),
 	("Dinheiro", {"Dinheiro":1}),
-	("sim sim", {"sim sim":2}),
+	("sim sim", {"sim":2}),
 	("esta certo", {"esta":1, "certo":1})
 ]
 
