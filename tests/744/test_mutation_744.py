@@ -6,6 +6,6 @@ test_cases = [
 ]
 
 @pytest.mark.parametrize("a, output", test_cases)
-def test_hastag(a, output, solution):
+def test_hashtag(a, output, solution):
 	imp = importlib.import_module(solution)
-	assert imp.hastag(a) == output
+	assert imp.hashtag(a) == output

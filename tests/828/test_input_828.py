@@ -7,11 +7,11 @@ test_cases = [
 	(97, True),
 	(101, True),
 	(100, False),
-	(102, False),
+	(102, False)
 ]
 
-@pytest.mark.parametrize("primo, output", test_cases)
+@pytest.mark.parametrize("n, output", test_cases)
 
-def test_freq_palavras(primo, output, solution):
+def test_primo(n, output, solution):
 	imp = importlib.import_module(solution)
-	assert imp.freq_palavras(primo) == output
+	assert imp.primo(n) == output

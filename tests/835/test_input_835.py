@@ -31,14 +31,14 @@ ct3 = [
 
 
 test_cases = [
-	(ct1, (1, 1, 1)),
-	(ct2, (3, 3.0, 3)),
-	(ct3, (6, 1.0, 10)),
+    (ct1, (1, 1, 1)),
+    (ct2, (3, 3.0, 3)),
+    (ct3, (6, 1.0, 10)),
 ]
 
 @pytest.mark.parametrize("matriz, output", test_cases)
 
-def test_lingua_p(matriz, output, solution):
-	imp = importlib.import_module(solution)
-	assert imp.lingua_p(matriz) == output
+def test_melhor_volta(matriz, output, solution):
+    imp = importlib.import_module(solution)
+    assert imp.melhor_volta(matriz) == output
 
