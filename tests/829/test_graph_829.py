@@ -10,4 +10,4 @@ test_cases = [
 @pytest.mark.parametrize("a, output", test_cases)
 def test_soma_h(a, output, solution):
 	imp = importlib.import_module(solution)
-	assert imp.some_h(a) == output
+	assert imp.soma_h(a) == output

@@ -64,16 +64,16 @@ def save_tests_output(criterion,problem_id):
 			result = ""
 			new_outcome = 1
 			for test_id in range(test_cases):
-				if "passed" in lines[4 + 3 * (test_id)]:
+				if "passed" in lines[4 + 3 * (test_id)].lower():
 					result = result + "P"
 					test_metrics[test_id*4] = test_metrics[(test_id*4)] + 1
 					continue
-				elif "AssertionError" in lines[4 + 3 * (test_id)]:
+				elif "assert" in lines[4 + 3 * (test_id)].lower():
 					result = result + "F"
 					test_metrics[(test_id*4)+1] = test_metrics[(test_id*4)+1] + 1
 					new_outcome = 0
 					continue
-				elif "Timeout" in lines[4 + 3 * (test_id)]:
+				elif "timeout" in lines[4 + 3 * (test_id)].lower():
 					result = result + "T"
 					test_metrics[(test_id*4)+2] = test_metrics[(test_id*4)+2] + 1
 					new_outcome = 0
@@ -115,6 +115,6 @@ def save_tests_output(criterion,problem_id):
 	df_solution.to_csv(path_or_buf=path_csv_solution, index=False)
 
 
-#save_tests_output("input",742)
-#save_tests_output("graph",810)
+#save_tests_output("input",816)
+save_tests_output("graph",817)
 #save_tests_output("mutation",840)

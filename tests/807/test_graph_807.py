@@ -6,6 +6,6 @@ test_cases = [
 ]
 
 @pytest.mark.parametrize("a, output", test_cases)
-def test_conta_frase(a, output, solution):
+def test_conta_frases(a, output, solution):
 	imp = importlib.import_module(solution)
-	assert imp.conta_frase(a) == output
+	assert imp.conta_frases(a) == output

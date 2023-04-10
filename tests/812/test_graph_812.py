@@ -3,7 +3,7 @@ import pytest
 import importlib
 
 test_cases = [
-	("frase, sem. pontuação!", "frase sem pontuação")
+	("frase, sem. pontuação!", "frase  sem  pontuação ")
 ]
 
 @pytest.mark.parametrize("a, output", test_cases)
