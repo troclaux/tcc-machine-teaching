@@ -2,7 +2,7 @@ import pytest
 import importlib
 
 test_cases = [
-    (10,2.9289682539682538)
+    (10,2.93)
 ]
 
 @pytest.mark.parametrize("a, output", test_cases)

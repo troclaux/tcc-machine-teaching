@@ -5,7 +5,7 @@ test_cases = [
 	(1, False),
 	(2, True),
 	(3, True),
-	(0, True),
+	(0, False),
     (4, False),
 	(5, True)
 ]

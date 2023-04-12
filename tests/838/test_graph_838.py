@@ -3,7 +3,7 @@ import pytest
 import importlib
 
 test_cases = [
-	(12.0, 2.5, 1)
+	(12.0, 2.5, 4)
 ]
 
 @pytest.mark.parametrize("a, b, output", test_cases)

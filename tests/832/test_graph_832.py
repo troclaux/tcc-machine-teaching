@@ -2,7 +2,7 @@ import pytest
 import importlib
 
 test_cases = [
-	([[1,2], [3,4]], 2),
+	([[1,2], [3,4]], True),
 	([], True)
 ]
 

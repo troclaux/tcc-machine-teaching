@@ -3,8 +3,8 @@ import importlib
 
 test_cases = [
 	([1], 0),
-	([1], 1),
-	([1], 1)
+	([1,1], 1),
+	([1,1,2], 1)
 ]
 
 @pytest.mark.parametrize("a, output", test_cases)
