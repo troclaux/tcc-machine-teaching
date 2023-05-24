@@ -68,6 +68,5 @@ def get_combinations(part_input):
     result = convert_partition_to_string(get_all_combinations_coverage(part_input))
     print(result)
     pyperclip.copy(result)
-  print()
 
 get_combinations(partitions)
