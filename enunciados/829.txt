@@ -1,0 +1,12 @@
+chapter__label:
+08 - Estrutura de repetição iteradora: for
+id:
+829
+content:
+Sendo
+
+![Alt text](https://drive.google.com/uc?export=view&id=1U3G3mvpO8221qBb9od-ilMq0UadK31ve)
+
+Faça uma função chamada **soma_h** para calcular e retornar o valor H com N termos onde N é inteiro e dado com entrada.
+**Retorne seu resultado somente com 2 casas decimais, utilizando a função \`round(número, 2)\`.**
+

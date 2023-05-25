@@ -1,0 +1,11 @@
+chapter__label:
+08 - Estrutura de repetição iteradora: for
+id:
+798
+content:
+Construa uma função chamada **freq_palavras(frases)** que receba uma string e retorne um dicionário onde cada palavra dessa string seja uma chave e tenha como valor o número de vezes que a palavra aparece. Por exemplo: 
+
+- freq_palavras("dinheiro é dinheiro e vice versa") 
+
+Retorna o dicionário: { "dinheiro":2, "é": 1, "e": 1, "vice": 1, "versa":1}
+

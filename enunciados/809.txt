@@ -1,0 +1,10 @@
+chapter__label:
+05 - Listas e Dicionários
+id:
+809
+content:
+Faça uma função chamada definida por **\`intercala(lista1, lista2)\`** que dadas duas listas L1 e L2 de tamanho 3, gera uma lista L3 que é formada intercalando os elementos de L1 e L2. 
+
+Exemplo:
+L1 = [1, 3, 5] e L2 = [2, 4, 6] gera L3 = [1, 2, 3, 4, 5, 6].
+

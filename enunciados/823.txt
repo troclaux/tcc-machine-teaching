@@ -1,0 +1,23 @@
+chapter__label:
+07 - Estrutura de repetição com teste de parada: While
+id:
+823
+content:
+*Questão OBI (Olimpíada Brasileira de Informática - OBI2007, Fase 1, Nível 1) - (Peça Perdida)*
+
+Joãozinho adora quebra-cabeças, essa é sua brincadeira favorita. O grande problema, porém, é que às vezes o jogo vem com uma peça faltando. Isso irrita bastante o pobre menino, que tem de descobrir qual peça está faltando e solicitar uma peça de reposição ao fabricante do jogo. Sabendo que o quebra-cabeças tem N peças, numeradas de 1 a N e que exatamente uma está faltando, ajude Joãozinho a saber qual peça ele tem de pedir.
+
+Escreva uma função chamada **faltante** que, dada uma lista com N − 1 inteiros numerados de 1 a N, descubra qual número inteiro deste intervalo está faltando.
+
+- **Entrada:** O parâmetro de entrada é uma lista L de tamanho N − 1 contendo números inteiros (não repetidos) de 1 a N.
+- **Saída:** A sua função deve retornar o número inteiro x que pertence ao intervalo [1, N] mas que não pertence a lista de entrada L.
+
+Exemplos:
+
+- Entrada: [3,1];
+Saída: 2
+- Entrada: [1,2,3,5] ;
+Saída: 4
+- Entrada: [2,4,3] ;
+Saída: 1
+

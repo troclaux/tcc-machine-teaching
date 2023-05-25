@@ -1,0 +1,7 @@
+chapter__label:
+08 - Estrutura de repetição iteradora: for
+id:
+828
+content:
+Faça uma função chamada **primo** que dado um número inteiro positivo, verifique se este número é primo ou não. Retorne um valor booleano. Dica: uma estratégia simples para identificar a primalidade de um número é verificar se não existe nenhum número menor que ele próprio (e maior ou igual a 2) que o divida.  Dica 2: O número de divisões indicado na dica anterior é maior que o necessário. Você consegue reduzi-lo?
+

@@ -1,0 +1,9 @@
+chapter__label:
+06 - Funções para manipulação de iteráveis
+id:
+751
+content:
+Faça uma função definida por **quant_palavras(frase)** que dada uma frase, retorne o número de palavras da frase. Considere que a frase pode ter espaços no início e no final.
+
+**Dica: veja a função split()**
+

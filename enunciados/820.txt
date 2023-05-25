@@ -1,0 +1,15 @@
+chapter__label:
+07 - Estrutura de repetição com teste de parada: While
+id:
+820
+content:
+Faça uma função chamada **posLetra** que recebe como entrada uma string, uma letra, e um número que indica a ocorrência desejada da letra (1 para primeira ocorrência, 2 para segunda, etc). Sua função deve retornar em que posição da string aquela ocorrência da letra está. Caso exista menos ocorrências da letra do que a ocorrência pedida, a função deve retornar -1.
+
+Exemplo:
+
+>>> posLetra("mariana come banana", 'a', 3)
+
+6
+
+(posição da terceira ocorrência da letra 'a' na string dada)
+

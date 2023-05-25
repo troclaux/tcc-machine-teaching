@@ -1,0 +1,7 @@
+chapter__label:
+07 - Estrutura de repetição com teste de parada: While
+id:
+821
+content:
+Faça uma função chamada **fatorial** que dado um número, calcule o fatorial deste número. (Não usar a função factorial do módulo math)
+

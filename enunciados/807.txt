@@ -1,0 +1,7 @@
+chapter__label:
+06 - Funções para manipulação de iteráveis
+id:
+807
+content:
+Dado um texto armazenado em uma string, faça a função **conta_frases** que conte o número de frases que aparecem neste texto. Cada frase no texto é terminada com um ponto final, um ponto de exclamação, um ponto de interrogação ou três pontos em sequência (reticências). Pontos de exclamação ou de interrogação não aparecerão repetidos em sequência no texto e esses símbolos só aparecem no texto terminando uma frase. No exemplo a seguir, são contadas 4 frases: “Preciso tirar um cochilo. Meus Deus! Que horas são? Vou perder a minha aula...”
+

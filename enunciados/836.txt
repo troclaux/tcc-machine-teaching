@@ -1,0 +1,21 @@
+chapter__label:
+09 - Laços aninhados e matrizes
+id:
+836
+content:
+Suponha que os dados de funcionários de uma empresa sejam armazenados em uma matriz como a do exemplo a seguir:
+
+![Alt text](https://drive.google.com/uc?export=view&id=1oNMk-cPxqchioVW2S0krdIRrQnVM3swX)
+
+Cada linha da matriz tem quatro entradas, representando as informações referentes a nome, registro, setor e telefone de um funcionário, nesta ordem. O número de linhas depende da quantidade de funcionários. Todas as entradas da matriz estão em formato string.
+
+
+Escreva uma função chamada **busca** que receba uma matriz como a do exemplo e faça uma busca por setor, ou seja, dado um nome de um setor da empresa, a função retorna os dados de todos os funcionários daquele setor. Por exemplo:
+
+>>> busca("Contabilidade", matriz)
+
+>>> [[‘Adalberto Ferreira’, ‘566’, ‘(21)84564-5248’],[‘Flavia Amorim’, ‘465’, ‘(21)2134-4845']]
+
+
+Se nenhum registro for encontrado, a função deverá retornar uma lista vazia.
+

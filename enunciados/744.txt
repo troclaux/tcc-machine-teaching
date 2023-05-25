@@ -1,0 +1,7 @@
+chapter__label:
+04 - Variáveis e atribuição, strings e tuplas
+id:
+744
+content:
+Escreva uma função chamada **hashtag** que receba uma string e insira o caractere ”#” no início, no meio e no final dela. Por exemplo, se a entrada for ”abcd”, a saída deve ser ”#ab#cd#”. Outro exemplo: se receber ”abcde”, a função deve retornar ”#ab#cde#”.
+

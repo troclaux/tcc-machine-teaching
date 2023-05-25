@@ -1,0 +1,9 @@
+chapter__label:
+09 - Laços aninhados e matrizes
+id:
+835
+content:
+Uma pista de Kart permite 10 voltas para cada um dos 6 corredores. Faça uma função chamada **melhor_volta** que receba como entrada uma matriz 6 x 10 com os tempos em segundos dos corredores em cada volta. A função deve retornar uma **tupla** informando: De quem foi a melhor volta da prova, com qual tempo e em que volta. Assuma que os corredores tem tempos diferentes. (dica: use a função \`min\`).
+
+Obs: use números de 1 a 6 para os corredores e de 1 a 10 para as voltas (não esqueça que em Python os índices começam de 0)
+

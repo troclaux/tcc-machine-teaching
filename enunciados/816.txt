@@ -1,0 +1,7 @@
+chapter__label:
+06 - Funções para manipulação de iteráveis
+id:
+816
+content:
+Faça uma função chamada **maiores** que dada uma lista de números inteiros e um número inteiro n, retorna outra lista, que contenha todos os números da lista original maiores que n, ordenados em ordem crescente.
+
