@@ -1,0 +1,7 @@
+chapter__label:
+09 - Laços aninhados e matrizes
+id:
+832
+content:
+Faça uma função booleana chamada **eh_quadrada** para identificar se uma matriz é quadrada. Observação: uma matriz vazia (sem nenhuma linha nem coluna) é considerada quadrada.
+

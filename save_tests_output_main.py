@@ -53,7 +53,7 @@ def save_tests_output(criterion,problem_id):
 		import_str = "solution_" + solution_id
 		path_json = os.path.join(path, f"log_{criterion}.json")
 		cmd = f"pytest {path_test} --tb=no --show-capture=no --solution {import_str} --report-log={path_json} --timeout=1"
-		#pytest test_input_820.py --tb=no --show-capture=no --solution solution_102115 --report-log=log_input.json --timeout=2
+		#pytest test_input_836.py --tb=no --show-capture=no --solution solution_368799 --report-log=log_input.json --timeout=2
 		subprocess.run(cmd, shell=True)
 
 		log = open(f"{path_json}", "r")
@@ -115,6 +115,6 @@ def save_tests_output(criterion,problem_id):
 	df_solution.to_csv(path_or_buf=path_csv_solution, index=False)
 
 
-#save_tests_output("input",816)
-save_tests_output("graph",817)
+#save_tests_output("input",809)
+#save_tests_output("graph",817)
 #save_tests_output("mutation",840)

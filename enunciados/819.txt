@@ -1,0 +1,7 @@
+chapter__label:
+07 - Estrutura de repetição com teste de parada: While
+id:
+819
+content:
+Faça uma função chamada **filtraMultiplos** para filtrar os múltiplos de um número n. Sua função deve receber como entrada uma lista de números e um número, e retornar outra lista contendo todos os elementos da lista original que forem divisíveis por n.
+

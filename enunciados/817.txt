@@ -1,0 +1,11 @@
+chapter__label:
+06 - Funções para manipulação de iteráveis
+id:
+817
+content:
+Faça uma função chamada **acima\\_da\\_media** que dada uma lista com as notas dos alunos de uma turma, retorne uma lista ordenada com as notas que ficaram acima da média.
+
+**DICA 1**: Python provê uma função  sum(lista). 
+
+**DICA 2:** Aproveite a função desenvolvida no exercício **maiores**. Para reaproveitar uma função feita no Machine Teaching, copie o código completo da função e cole na caixa de resposta do exercício onde quer utilizá-la. Faça então a função pedida no exercício, embaixo da que você colou, e dentro dela você irá chamar a que está reutilizando.
+

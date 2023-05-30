@@ -1,0 +1,7 @@
+chapter__label:
+02 - Funcoes e Tipos de dados
+id:
+839
+content:
+Um grupo de amigos deseja fazer uma viagem e decidiram ir de carro. Pelas regras rodoviárias um veículo convencional tem a capacidade de transportar até 5 passageiros, porém há veículos com outras capacidades. Construa uma função em Python chamada **carros** para calcular e retornar o número exato de carros necessários para esta viagem, considerando que seja dado como entrada o número de pessoas. Caso os veículos considerados sejam de capacidades não convencionais, será dado também como entrada a capacidade dos veículos, considerando que todos os veículos são iguais.
+

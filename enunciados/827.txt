@@ -1,0 +1,9 @@
+chapter__label:
+08 - Estrutura de repetição iteradora: for
+id:
+827
+content:
+Faça uma função chamada **qtd_divisores** que conte quantos divisores um número tem. Este número será passado como entrada.
+
+Exemplo: Se o número for 10, os divisores são: 1, 2, 5 e 10; total de 4 divisores.
+

@@ -1,0 +1,9 @@
+chapter__label:
+05 - Listas e Dicionários
+id:
+842
+content:
+Faça uma função chamada **pontos\\_por\\_time** que receba uma lista de dois elementos, onde cada elemento é também uma lista. 
+A lista completa tem informações do número de gols em dois jogos de futebol entre dois times (jogo da ida e jogo da volta), no seguinte formato: [['Cormengo', 'Flamínthians', [1, 0]], ['Flamínthians', 'Cormengo', [2, 2]]].
+Nesta lista de exemplo, no primeiro jogo entre Cormengo e Flamínthians, o Cormengo fez 1 gol e o Flamínthians não fez gol. Sua função deve retornar um dicionário cujos mapeamentos são: <nome do time>  -> <numero total de pontos na fase>. Os pontos de um time na fase são calculados da seguinte forma: em cada jogo, os times recebem três pontos por vitória e um ponto por empate. Não são atribuídos pontos para derrotas. O total de pontos de uma fase é a soma de pontos dos dois jogos da fase. Na lista de exemplo, o total de pontos do Cormengo é 4 e do Flamínthians é 1.
+

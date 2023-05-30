@@ -1,0 +1,7 @@
+chapter__label:
+07 - Estrutura de repetição com teste de parada: While
+id:
+824
+content:
+Faça uma função chamada **uppCons** que receba como entrada uma frase e retorne a frase com todas as suas consoantes em maiúsculas (e os demais caracteres exatamente como estavam na frase original).
+
