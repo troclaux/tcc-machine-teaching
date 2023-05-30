@@ -1,0 +1,25 @@
+chapter__label:
+04 - Variáveis e atribuição, strings e tuplas
+id:
+806
+content:
+Questão OBI (Olimpíada Brasileira de Informática - 2007, Fase 1, Nível 1) - (http://olimpiada.ic.unicamp.br/pratique/programacao/nivel1/2007f1p1_colisoes)
+
+Detecção de colisão é uma das operações mais comuns (e importantes) em jogos eletrônicos. O objetivo, basicamente, é verificar se dois objetos quaisquer colidiram, ou seja, se a interseção entre eles é diferente de vazio. Isso pode ser usado para saber se duas naves colidiram, se um monstro bateu numa parede, se um personagem pegou um item, etc.
+
+Para facilitar as coisas, muitas vezes os objetos são aproximados por figuras geométricas simples (esferas, paralelepípedos, triângulos etc). Neste problema, os objetos são aproximados por retângulos num plano 2D. 
+
+Escreva uma função chamada **colisao** que, dados dois retângulos, determine se eles se interceptam ou não. Cada retângulo é determinado pelas coordenadas x e y de dois de seus vértices diametralmente opostos,  representando a diagonal que vai da esquerda para a direita e de baixo para cima. Os lados de cada retângulo são sempre paralelos aos eixos x e y.
+
+**Entrada:** Os parâmetros de entrada são duas tuplas com quatro valores inteiros cada uma, representando as coordenadas do primeiro retângulo e as coordenadas do segundo retângulo. 
+
+**Saída:** A sua função deve retornar o valor booleano True caso haja interseção ou False, caso não haja. 
+
+**Exemplos**
+
+Entrada: (0,0,1,1), (0,0,1,1) ; Saída: True
+
+Entrada: (0,0,2,2), (1,1,3,3) ; Saída: True
+
+Entrada: (0,0,1,1), (2,2,3,3) ; Saída: False
+

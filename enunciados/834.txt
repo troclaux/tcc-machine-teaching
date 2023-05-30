@@ -1,0 +1,7 @@
+chapter__label:
+09 - Laços aninhados e matrizes
+id:
+834
+content:
+Faça uma função chamada **media_matriz** que dada uma matriz de inteiros não vazia, retorna a média de todos os números da matriz (com exatamente duas casas decimais de precisão).
+

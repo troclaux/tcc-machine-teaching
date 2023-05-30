@@ -1,0 +1,13 @@
+chapter__label:
+08 - Estrutura de repetição iteradora: for
+id:
+800
+content:
+Escreva uma função chamada **total** que recebe uma lista de compras e um dicionário contendo o preço de cada produto disponível em uma determinada loja, e retorna o valor total dos itens da lista que estejam disponíveis nesta loja. Por exemplo, para os dados: 
+- lista de compras = [’biscoito’, ’chocolate’, ’farinha’]
+- produtos = { ’amaciante’:4.99, ’arroz’:10.90, ’biscoito’:1.69, ’cafe’:6.98, ’chocolate’:3.79, ’farinha’:2.99 }
+
+O valor retornado pela função será 8.47.
+
+**Retorne seu resultado somente com 2 casas decimais, utilizando a função \`round(número, 2)\`.**
+

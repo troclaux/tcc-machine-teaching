@@ -1,0 +1,14 @@
+chapter__label:
+06 - Funções para manipulação de iteráveis
+id:
+810
+content:
+Faça uma função chamada **inverte** que dada uma frase retorne uma outra frase que contenha as mesmas palavras da frase de entrada na ordem inversa, sem letras maiúsculas, e sem a pontuação. Dica: remova a pontuação da frase, usando a função que você fez pro exercício anterior. 
+Exemplo:
+
+frase lida: “Nossa, como eu gosto de chocolate.”
+
+frase alterada: “chocolate de gosto eu como nossa”
+
+DICA: remova a pontuação da frase, usando a função que você fez pro exercício anterior. Para reaproveitar uma função feita no Machine Teaching, copie o código completo da função e cole na caixa de resposta do exercício onde quer utilizá-la. Faça então a função pedida no exercício, embaixo da que você colou, e dentro dela você irá chamar a que está reutilizando.
+

@@ -1,0 +1,15 @@
+chapter__label:
+08 - Estrutura de repetição iteradora: for
+id:
+831
+content:
+Faça uma função chamada **lingua_p**  que receba como parâmetro uma palavra (em português) e retorne esta mesma palavra traduzida para a língua do P. Uma palavra foi traduzida para a língua do P quando, após cada vogal da palavra original, é inserida a sequência de letras 'p' mais a vogal original. A resposta deve ignorar a diferença entre minúsculas e maiúsculas e retornar a palavra traduzida toda em minúsculas. 
+
+Por exemplo:
+
+exemplo → epexepemplopo
+
+entao → epentapaopo
+
+Caderno → capadepernopo
+

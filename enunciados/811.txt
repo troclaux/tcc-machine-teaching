@@ -1,0 +1,21 @@
+chapter__label:
+05 - Listas e Dicionários
+id:
+811
+content:
+*Questão OBI (Olimpíada Brasileira de Informática - OBI2012, Fase 1, Nível 2) - (Colchão)*
+
+João está comprando móveis novos para sua casa. Agora é a vez de comprar um colchão novo, de molas, para substituir o colchão velho. As portas de sua casa têm **altura H** e **largura L** e existe um colchão que está em promoção com dimensões A × B × C. O colchão tem a forma de um paralelepípedo reto retângulo e João só consegue arrastá-lo através de uma porta com uma de suas faces paralelas ao chão, mas consegue virar e rotacionar o colchão antes de passar pela porta. Entretanto, de nada adianta ele comprar o colchão se ele não passar através das portas de sua casa. Portanto ele quer saber se consegue passar o colchão pelas portas e para isso precisa de sua ajuda. Faça uma função definida por **colchao(medidas,H,L)** para resolver esse problema, onde medidas é uma lista com os tamanhos inteiros A, B e C, e H e L são os tamanhos inteiros da altura e largura da porta, respectivamente.
+
+- **Entrada:** Os parâmetros de entrada são uma lista com as dimensões do colchão em centímetros, ordenadas da menor para a maior, e dois inteiros H e L, correspondentes respectivamente a altura e a largura das portas em centímetros.
+- **Saída:** A sua função deve retornar True se o colchão passa pelas portas e False caso contrário.
+
+Exemplos:
+
+- Entrada: [25,120,220], 200, 100 ; 
+Saída: True
+- Entrada: [25,205,220], 200, 100 ; 
+Saída: False
+- Entrada: [25,200,220], 200, 100 ; 
+Saída: True
+

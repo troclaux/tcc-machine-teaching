@@ -1,0 +1,10 @@
+chapter__label:
+06 - Funções para manipulação de iteráveis
+id:
+815
+content:
+Faça uma função definida por **insere(lista_numero, n)**  que dada uma lista ordenada (crescente) de números inteiros 
+e um número inteiro n, inclua n na posição correta, ou seja, de tal maneira que a lista  continue ordenada.
+
+**DICA**: Provavelmente, a primeira idéia que vem à cabeça é inserir diretamente na posição correta, verificando os elementos da lista até achar a posição onde o n deve ser inserido. Mas nós ainda não sabemos fazer isso (veremos nas próximas aulas). Pense em outra estratégia de resolução deste problema, usando a função **list.sort(lista)**.
+

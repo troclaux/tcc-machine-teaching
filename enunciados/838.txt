@@ -1,0 +1,7 @@
+chapter__label:
+02 - Funcoes e Tipos de dados
+id:
+838
+content:
+Pedrinho quer comprar o maior número de bombons possível com o dinheiro que tem. Faça uma função chamada **num_bombons** para calcular quantos bombons ele consegue comprar, dados o dinheiro e o preço do bombom para realização da compra.
+
