@@ -1,5 +1,8 @@
 # TCC Machine Teaching
 
+## Para criar o banco de dados que guardara os resultados
+
+1. python3 create_DB.py
 ## Para extrair problemas e resuluções do arquivo .pkl
 
 1. python3 depickle_problems.py
@@ -10,7 +13,10 @@
 	- input
 	- graph
 	- mutation
-- Insira o comando abaixo seguido do número do problema que será testado:
-	- python3 run_<tipo de critério>_tests.py <número do problema>
-- Para salvar o output em um .txt:
-	- python3 save_<tipo de critério>_tests_output.py <número do problema>
+- abrir o arquivo runner.py e definir as variaveis "problems" e "criteria".
+	- Pode tbm alterar o numero de workers para alterar o numero de threads, cuidado ao utilizar um numero de workers q seja proximo ao numero de cores do processador da maquina execcutando.
+- excutar "python3 runner.py"
+- apos feita todas as execuçoes desejadas do runner.py, executar "python3 to_sql.py" que ira enviar os resultados gerados para o banco de dados antes mencionado.
+
+## Para gerar as metricas
+- executar o notebook aggregate_data.ipynb
