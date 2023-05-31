@@ -1,22 +1,43 @@
 # TCC Machine Teaching
 
-## Para criar o banco de dados que guardara os resultados
+## Para criar o banco de dados que armazena os resultados, basta rodar o comando:
 
-1. python3 create_DB.py
-## Para extrair problemas e resuluções do arquivo .pkl
+```
+python3 create_DB.py
+```
 
-1. python3 depickle_problems.py
-2. python3 depickle_solutions.py
+## Baixar o arquivo .pkl, que contém os problemas e soluções no [link](https://drive.google.com/file/d/1CFEO6PHUJf5DDRLEZen9vCJ-_X97yM_Z/view?usp=sharing)
 
-## Para testar todas as resoluções que foram extraídas
+## O próximo passo consiste em extrair os problemas e soluções do arquivo .pkl
+
+```
+python3 depickle_problems.py
+```
+
+```
+python3 depickle_solutions.py
+```
+
+## Depois basta testar todas as soluções que foram extraídas
+
 - Existem 3 tipos de critérios:
 	- input
 	- graph
 	- mutation
-- abrir o arquivo runner.py e definir as variaveis "problems" e "criteria".
-	- Pode tbm alterar o numero de workers para alterar o numero de threads, cuidado ao utilizar um numero de workers q seja proximo ao numero de cores do processador da maquina execcutando.
-- excutar "python3 runner.py"
-- apos feita todas as execuçoes desejadas do runner.py, executar "python3 to_sql.py" que ira enviar os resultados gerados para o banco de dados antes mencionado.
 
-## Para gerar as metricas
-- executar o notebook aggregate_data.ipynb
+- Abrir o arquivo runner.py e definir as variáveis "problems" e "criteria"
+	- Definir o número da variável "n_jobs", que determina o número de threads. Se certifique que a variável está próxima do número de cores do processador que vai extrair os dados
+
+- Executar o seguinte comando:
+
+```
+python3 runner.py
+```
+
+- Inserir comando que envia os resultados gerados para o banco de dados mencionado anteriormente
+```
+python3 to_sql.py
+```
+
+## Para gerar os dados
+- Execute o notebook aggregate_data.ipynb
