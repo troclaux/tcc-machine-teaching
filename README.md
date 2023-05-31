@@ -8,7 +8,7 @@ python3 create_DB.py
 
 ## Baixar o arquivo .pkl, que contém os problemas e soluções no [link](https://drive.google.com/file/d/1CFEO6PHUJf5DDRLEZen9vCJ-_X97yM_Z/view?usp=sharing)
 
-## O próximo passo consiste em extrair os problemas e soluções do arquivo .pkl
+## Extrair os problemas e soluções do arquivo .pkl
 
 ```
 python3 depickle_problems.py
